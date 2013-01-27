@@ -1,3 +1,13 @@
+---
+layout: post
+title: " javascript Number --- 再次结识"
+description: "2013-01-27 javascript基本功"
+category: 
+tags: ["javascript"]
+---
+{% include JB/setup %}
+
+
 javascript类型划为两大类：原始类型（甭管这样的翻译是否规范，英文为primitive type) 和 对象类型。原始类型又划为四大类：数值、字符串、布尔值，还有两个特殊的类型：null 和 undefined 。 
 废话少说，直接进入主题：*javascript number的几点*
 1. 与其他语言相比，javascript number不同点
