@@ -27,21 +27,21 @@ infinity.
 >* use arithmetic operators with non-numeric operands that
 >cannot be converted to numbers
 
-Infinity // A read/write variable initialized to Infinity.
-    Number.POSITIVE_INFINITY // Same value, read-only.
-    1/0 // This is also the same value.
-    Number.MAX_VALUE + 1 // This also evaluates to Infinity.
-    Number.NEGATIVE_INFINITY // These expressions are negative infinity.
-    -Infinity
-    -1/0 
-    -Number.MAX_VALUE - 1
-    NaN // A read/write variable initialized to NaN.
-    Number.NaN // A read-only property holding the same value.
-    0/0 // Evaluates to NaN.
-    Number.MIN_VALUE/2 // Underflow: evaluates to 0
-    -Number.MIN_VALUE/2 // Negative zero
-    -1/Infinity // Also negative 0
-    -0
+	Infinity // A read/write variable initialized to Infinity.
+	Number.POSITIVE_INFINITY // Same value, read-only.
+	1/0 // This is also the same value.
+	Number.MAX_VALUE + 1 // This also evaluates to Infinity.
+	Number.NEGATIVE_INFINITY // These expressions are negative infinity.
+	-Infinity
+	-1/0 
+	-Number.MAX_VALUE - 1
+	NaN // A read/write variable initialized to NaN.
+	Number.NaN // A read-only property holding the same value.
+	0/0 // Evaluates to NaN.
+	Number.MIN_VALUE/2 // Underflow: evaluates to 0
+	-Number.MIN_VALUE/2 // Negative zero
+	-1/Infinity // Also negative 0
+	-0
 
 4. javascript NaN != NaN 
 > The not-a-number value has one unusual feature in JavaScript: it does not compare equal to any other value, including itself. This means that you can’t write x == NaN to determine whether the value of a variable xis  NaN. Instead, you should write  x != x. That expression will be true if, and only if, x is NaN. The function isNaN()is similar. It returns trueif its argument is NaN, or if that argument is a non-numeric value such as a string or an object. The related function isFinite()returns trueif its argument is a number other than NaN, Infinity, or -Infinity.
