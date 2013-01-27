@@ -11,5 +11,4 @@ tagline: find good life
 </ul>
 
 ##TODO 
-show the newest article the index.html
-
+so much to do!!! and how to do???
