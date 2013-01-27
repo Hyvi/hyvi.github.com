@@ -27,6 +27,7 @@ infinity.
 >* use arithmetic operators with non-numeric operands that
 >cannot be converted to numbers
 
+<pre><code>
 	Infinity // A read/write variable initialized to Infinity.
 	Number.POSITIVE_INFINITY // Same value, read-only.
 	1/0 // This is also the same value.
@@ -42,23 +43,22 @@ infinity.
 	-Number.MIN_VALUE/2 // Negative zero
 	-1/Infinity // Also negative 0
 	-0
-
+</code></pre>
 4. javascript NaN != NaN 
 > The not-a-number value has one unusual feature in JavaScript: it does not compare equal to any other value, including itself. This means that you can’t write x == NaN to determine whether the value of a variable xis  NaN. Instead, you should write  x != x. That expression will be true if, and only if, x is NaN. The function isNaN()is similar. It returns trueif its argument is NaN, or if that argument is a non-numeric value such as a string or an object. The related function isFinite()returns trueif its argument is a number other than NaN, Infinity, or -Infinity.
 
 5. .3-.2 == .1 & .2-.1 == .1 
 
 6. -0 === 0 
-
+<pre><code>
     var zero = 0; // Regular zero
     var negz = -0; // Negative zero
     zero === negz // => true: zero and negative zero are equal 
     1/zero === 1/negz // => false: infinity and -infinity are not equal
-
-
+</code></pre>
 
 这算是对之前文章http://hyvi.sinaapp.com/2012/10/09/javascript-nan/ 做了个补充。
 twitter上的代码：
-    
+<pre><code>  
     [0,7,5,10,4,15,2,13,4,16,4,10,1].map(function(a){return this[a];},typeof("")+typeof(0)+NaN+"d.").join("") 
-
+</code></pre>
