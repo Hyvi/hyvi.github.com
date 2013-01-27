@@ -60,4 +60,5 @@ zero === negz // => true: zero and negative zero are equal
 
 
 这算是对之前文章http://hyvi.sinaapp.com/2012/10/09/javascript-nan/ 做了个补充。
-
+twitter上的代码：
+    [0,7,5,10,4,15,2,13,4,16,4,10,1].map(function(a){return this[a];},typeof("")+typeof(0)+NaN+"d.").join("") 
