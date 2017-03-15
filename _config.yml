@@ -4,7 +4,8 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
-pygments: true
+#pygments: true
+highlighter:rouge
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -44,7 +45,7 @@ JB :
   # GitHub Pages (http://username.github.com)
   #   DO NOT SET BASE_PATH 
   #   (urls will be prefixed with "/" and work relatively)
-  #
+  ###
   # GitHub Project Pages (http://username.github.com/project-name)
   #
   #   A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
