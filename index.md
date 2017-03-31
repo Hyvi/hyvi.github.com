@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hyvi
-tagline: find good life
+tagline: 如果每个人都是一颗星球，我感激我们的光锥曾彼此重叠，而你永远改变了我的星轨。你是我所在的星系未曾分崩离析的原因，是我宇宙之网的永恒组成。
 ---
 
 <ul class="posts">
@@ -10,5 +10,6 @@ tagline: find good life
   {% endfor %}
 </ul>
 
-##TODO 
-so much to do!!! and how to do???
+
+### 未完待续
+
