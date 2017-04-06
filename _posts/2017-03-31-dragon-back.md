@@ -3,7 +3,7 @@ layout: post
 title: "港岛径第八段-土地灣-龙脊-大浪灣"
 description: ""
 category: 
-tags: [港岛径,大浪湾,土地湾]
+tags: [港岛径,香港,徒步]
 ---
 {% include JB/setup %}
 ######  港岛径第八段： 土地灣-打爛埕頂山-龍脊-馬塘坳-大浪灣
