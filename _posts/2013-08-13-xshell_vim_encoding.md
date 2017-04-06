@@ -2,7 +2,7 @@
 layout: post
 title: "fencview.vim + xshell + vim + 各种中文编码问题"
 description: "fencview.vim "
-category: vim
+category: Tech
 tags: [vim, xshell]
 ---
 {% include JB/setup %}

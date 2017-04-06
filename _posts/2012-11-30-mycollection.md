@@ -1,11 +1,16 @@
 ---
 layout: post
-title: "My Collection"
+title: "资源 「USEFUL LINKS」"
 description: "资料收集"
-category: nodejs
-tags: [nodejs, javascript]
+category: 
+tags: []
 ---
 {% include JB/setup %}
-###他人收藏
 
-* fengmk2的收藏： [mk2blog](https://github.com/fengmk2/mk2blog/tree/gh-pages/collections)
+### 杂七杂八
+[Xiaolei's Wiki](http://wiki.xiaolei.tech/) 一个值得学习的知识整理WIKI  
+[亢志军的个人网](http://robotkang.cc/) 一个用Jekyll+Github搭建的网站
+
+### 个人站点
+[我的电影我的书](https://movie.douban.com/mine) 记录我看过的、将要看的电影  
+[我的代码](https://bitbucket.org) 所有私有代码上传到网络上
