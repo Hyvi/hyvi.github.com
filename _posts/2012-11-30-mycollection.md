@@ -6,11 +6,15 @@ category:
 tags: []
 ---
 {% include JB/setup %}
-
+    
 ### 杂七杂八
 [Xiaolei's Wiki](http://wiki.xiaolei.tech/) 一个值得学习的知识整理WIKI  
 [亢志军的个人网](http://robotkang.cc/) 一个用Jekyll+Github搭建的网站
 
 ### 个人站点
-[我的电影我的书](https://movie.douban.com/mine) 记录我看过的、将要看的电影  
+[我的电影我的书](https://movie.douban.com/mine) 记录我看过的、将要看的电影    
+[我的东西](https://dongxi.douban.com/people/Hyvi/doulists) 零散记录下    
 [我的代码](https://bitbucket.org) 所有私有代码上传到网络上
+
+### Tools
+[Sublime SFTP Usage](https://wbond.net/sublime_packages/sftp/usage) 多看下手册会发现神奇的功能，比如Monitoring files功能
