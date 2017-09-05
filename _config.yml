@@ -10,14 +10,13 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Hyvi Blog
+title : Elon Tan Blog
 tagline: Site Tagline
 author :
-  name : Hyvi Tan
+  name : Elon Tan
   email : tanhaiwei0222#gmail.com (# === @) 
   github : Hyvi
   twitter : HyviTan
-  feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
