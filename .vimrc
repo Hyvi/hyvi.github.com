@@ -74,6 +74,7 @@ set softtabstop=2
 set ignorecase
 set incsearch 
 
+set nofoldenable 
 set foldmethod=syntax
 
 " >>>>>>>>>>
