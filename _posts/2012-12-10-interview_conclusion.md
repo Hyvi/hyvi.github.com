@@ -2,7 +2,7 @@
 layout: post
 title: "INTERVIEW CONCLUSION"
 description: "2012-12-08 福田财富大厦 问题"
-category: 
+category: Tech
 tags: ["interview"]
 ---
 {% include JB/setup %}

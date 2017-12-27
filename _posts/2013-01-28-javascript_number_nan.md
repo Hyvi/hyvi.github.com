@@ -2,7 +2,7 @@
 layout: post
 title: " javascript Number --- 再次结识"
 description: "2013-01-27 javascript基本功"
-category: 
+category: Tech
 tags: ["javascript"]
 ---
 {% include JB/setup %}

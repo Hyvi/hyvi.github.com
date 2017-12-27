@@ -2,7 +2,7 @@
 layout: post
 title: "4.2最美东湾露营-那些年我们在一起"
 description: ""
-category: 
+category: ['Life']
 tags: [徒步,香港,麦理浩径]
 ---
 {% include JB/setup %}

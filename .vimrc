@@ -1,3 +1,24 @@
+" # 上面插件安装完成之后执行下面内容
+" # command-t 文件搜索插件安装
+" $ cd ~/.vim/plugged/command-t 
+" $ rake make
+" 
+" # 搜索文本内容工具
+" # 需要安装 CtrlSF的依赖ripgrep
+" $ brew install ripgrep
+" 
+" # 代码提示插件也需要你运行安装哦，不然没有效果嘞
+" $ cd ~/.vim/plugged/YouCompleteMe
+" $ ./install.py
+" # or 新版脚本过时了，推荐上面脚本
+" $ ./install.sh 
+" 
+" # 需要安装ctags 不然配置没效果哦
+" # ctags for Mac
+" $ brew install ctags
+" # ctags for Centos7
+" $ yum install ctags
+" 
 let mapleader=";"
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -10,7 +31,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'posva/vim-vue'
+Plugin 'Valloric/MatchTagAlways'
+" Plugin 'darthmall/vim-vue'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'tomasr/molokai'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
@@ -18,26 +44,11 @@ Plugin 'scrooloose/nerdcommenter'
 " 随键而全的、支持模糊搜索的、高速补全的插件
 " YCM 由 google 公司搜索项目组的软件工程师 Strahinja Val Markovic 所开发
 Plugin 'Valloric/YouCompleteMe' 
-
 Plugin 'wincent/command-t'
 Plugin 'majutsushi/tagbar'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
-
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -54,6 +65,27 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 let g:vim_markdown_folding_disabled = 1
+" 配色方案
+
+set background=dark
+" 素雅 solarized
+" Plug 'altercation/vim-colors-solarized'
+" colorscheme solarized
+
+" 多彩 molokai
+" Plug 'tomasr/molokai' 
+" colorscheme molokai
+
+" 使用iTerm2
+" 开启 ozh, 使用主题：agnoster
+" 安装Powerline-patched font字体: https://github.com/powerline/fonts 
+colorscheme solarized
+
+
+" 复古 phd
+" Plug 'tomasr/molokai' 
+" colorscheme phd
+
 
 " https://github.com/jaywcjlove/vim-web/blob/master/.vimrc
 set laststatus=2
@@ -66,7 +98,6 @@ set hlsearch
 
 syntax enable
 syntax on
-
 filetype indent on
 set expandtab
 set tabstop=2
@@ -75,13 +106,35 @@ set softtabstop=2
 
 set ignorecase
 set incsearch 
+" syn sync fromstart
+syn sync minlines=1000 
 
 set nofoldenable 
-set foldmethod=syntax
+"set foldmethod=syntax
+set foldmethod=manual
+" 恢复上次文件打开位置
+set viminfo='10,\"100,:20,%,n~/.viminfo
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 
 
-set paste
+vnoremap <Leader>y "+y        " 设置快捷键将选中文本块复制至系统剪贴板
+nnoremap <Leader>p "+p            " 设置快捷键将系统剪贴板内容粘贴至vim
 
-" >>>>>>>>>>
+nnoremap <Leader>q :q<CR>         " 定义快捷键关闭当前分割窗口
+nnoremap <Leader>w :w<CR>         " 定义快捷键保存当前窗口内容
+nnoremap <Leader>WQ :wa<CR>:q<CR> " 定义快捷键保存所有窗口内容并退出 vim
+nnoremap <Leader>Q :qa!<CR>       " 不做任何保存，直接退出 vim
+
+" 设置快捷键遍历子窗口
+" nnoremap nw <C-W><C-W>        " 依次遍历,这样设置影响·n·跳转到下一个的速度
+nnoremap <Leader>lw <C-W>l    " 跳转至右方的窗口
+nnoremap <Leader>hw <C-W>h    " 跳转至方的窗口
+nnoremap <Leader>kw <C-W>k    " 跳转至上方的子窗口
+nnoremap <Leader>jw <C-W>j    " 跳转至下方的子窗口
+
+nmap <Leader>M %              " 定义快捷键在结对符之间跳转
+
+
+
 " 快速开关注释
 " Plug 'scrooloose/nerdcommenter'
 
@@ -100,10 +153,8 @@ let g:NERDCommentEmptyLines = 1
 " 启用时修整尾随空格注释
 let g:NERDTrimTrailingWhitespace = 1
 
-" <<<<<<<<<<
 
 
-" >>>>>>>>>>
 " 工程文件浏览
 
 " 查看工程文件列表
@@ -135,17 +186,16 @@ let NERDTreeWinSize=32
 " 设置 NERDTree 子窗口位置
 let NERDTreeWinPos="left"
 " 显示隐藏文件
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 " NERDTree 子窗口中不显示冗余帮助信息
 let NERDTreeMinimalUI=1
 " 删除文件时自动删除文件对应 buffer
 let NERDTreeAutoDeleteBuffer=1
+" 根据后缀隐藏文件
+let NERDTreeIgnore = ['\.pyc$']
 
-" <<<<<<<<<<
 
 
-
-" >>>>>>>>>>
 " YCM 补全
 
 " 随键而全的、支持模糊搜索的、高速补全的插件
@@ -177,7 +227,7 @@ inoremap <leader>; <C-x><C-o>
 set completeopt-=preview
 
 " 从第一个键入字符就开始罗列匹配项
-let g:ycm_min_num_of_chars_for_completion=1
+let g:ycm_min_num_of_chars_for_completion=3
 
 " 禁止缓存匹配项，每次都重新生成匹配项
 let g:ycm_cache_omnifunc=0
@@ -185,9 +235,15 @@ let g:ycm_cache_omnifunc=0
 " 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 
-" <<<<<<<<<<
- 
-" >>>>>>>>>>
+" 跳转到定义GoToDefinition
+" 跳转到声明GoToDeclaration
+" 以及两者的合体GoToDefinitionElseDeclaration
+"
+" YCM提供的跳跃功能采用了vim的jumplist，往前跳和往后跳的快捷键为Ctrl+O以及Ctrl+I。
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 " 标签列表
 
 " Plug 'majutsushi/tagbar'
@@ -210,5 +266,87 @@ let g:tagbar_type_css = {
     \ ]
 \ }
 
-" <<<<<<<<<<
+" 查找
+
+" 上下文插件，例如搜素到关键字，中间缩略，展示一段上下文
+" Plug 'dyng/ctrlsf.vim'
+" 使用 ctrlsf.vim 插件在工程内全局查找光标所在关键字，设置快捷键。
+" 快捷键速记法：search in project
+let g:ctrlsf_ackprg = 'rg' 
+nnoremap <Leader>sp :CtrlSF<CR>
+let g:ctrlsf_auto_close = 1
+" 选中搜索 - 文本中选中关键字
+vmap     <Leader>sp <Plug>CtrlSFVwordPath
+" 选中搜索 - 结果列表
+vmap     <Leader>sl <Plug>CtrlSFQuickfixVwordPath
+vmap     <Leader>sL <Plug>CtrlSFQuickfixVwordExec
+" CtrlSF Widnow 打开／关闭切换
+vmap     <Leader>st :CtrlSFToggle<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nmap     <C-F>f <Plug>CtrlSFPrompt
+" 预设视图 normal/compact
+let g:ctrlsf_default_view_mode = 'normal'
+
+
+
+" 批量编辑 multiple selections vor vim
+" Plugin 'terryma/vim-multiple-cursors'
+" 
+" Default mapping
+" let g:multi_cursor_next_key='<C-n>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>'
+" let g:multi_cursor_quit_key='<Esc>'
+
+
+"vim-snippets / UltiSnip
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Valloric/MatchTagAlways
+
+" This option holds all the filetypes for which this plugin will try to find and highlight enclosing tags.
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'vue' : 1,
+    \}
+
+"  Jumps to the enclosing tag if the tag is visible
+nnoremap <leader>% :MtaJumpToOtherTag<cr>
+
+
+" posva/vim-vue
+" My syntax highlighting stops working randomly
+autocmd FileType vue syntax sync fromstart
+
+"  How can I use NERDCommenter in Vue files?
+let g:ft = ''
+function! NERDCommenter_before()
+  if &ft == 'vue'
+    let g:ft = 'vue'
+    let stack = synstack(line('.'), col('.'))
+    if len(stack) > 0
+      let syn = synIDattr((stack)[0], 'name')
+      if len(syn) > 0
+        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
+      endif
+    endif
+  endif
+endfunction
+function! NERDCommenter_after()
+  if g:ft == 'vue'
+    setf vue
+    let g:ft = ''
+  endif
+endfunction
 

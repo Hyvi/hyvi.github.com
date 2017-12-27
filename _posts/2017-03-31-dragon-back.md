@@ -2,7 +2,7 @@
 layout: post
 title: "港岛径第八段-土地灣-龙脊-大浪灣"
 description: ""
-category: 
+category: ['Life']
 tags: [港岛径,香港,徒步]
 ---
 {% include JB/setup %}
