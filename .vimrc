@@ -31,14 +31,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'posva/vim-vue'
-Plugin 'Valloric/MatchTagAlways'
-" Plugin 'darthmall/vim-vue'
-Plugin 'dyng/ctrlsf.vim'
+
+" theme
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'dracula/vim'
 " Plugin 'tomasr/molokai'
+ 
+" edit
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 " 随键而全的、支持模糊搜索的、高速补全的插件
@@ -49,6 +49,21 @@ Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'dyng/ctrlsf.vim'
+Plugin 'Valloric/MatchTagAlways'
+
+" vue
+Plugin 'posva/vim-vue'
+" md
+Plugin 'plasticboy/vim-markdown'
+" git 
+Plugin 'airblade/vim-gitgutter'
+" go 
+Plugin 'fatih/vim-go'
+" check
+Plugin 'vim-syntastic/syntastic'
+Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'vim-python/python-syntax'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -61,31 +76,35 @@ filetype plugin indent on    " required
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
+" syntax highlight
+
+filetype on
+syntax  on
+
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
 let g:vim_markdown_folding_disabled = 1
 " 配色方案
 
-set background=dark
 " 素雅 solarized
 " Plug 'altercation/vim-colors-solarized'
-" colorscheme solarized
+set background=light
+colorscheme solarized
+" colorscheme dark_plus
+" let g:solarized_termcolors=256
+" colorscheme dracula
 
 " 多彩 molokai
 " Plug 'tomasr/molokai' 
 " colorscheme molokai
 
-" 使用iTerm2
-" 开启 ozh, 使用主题：agnoster
-" 安装Powerline-patched font字体: https://github.com/powerline/fonts 
-colorscheme solarized
-
-
 " 复古 phd
 " Plug 'tomasr/molokai' 
 " colorscheme phd
 
+" set termguicolors
+" set t_Co=256
 
 " https://github.com/jaywcjlove/vim-web/blob/master/.vimrc
 set laststatus=2
@@ -95,10 +114,6 @@ set number
 set cursorline
 set cursorcolumn
 set hlsearch
-
-syntax enable
-syntax on
-filetype indent on
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -106,15 +121,20 @@ set softtabstop=2
 
 set ignorecase
 set incsearch 
-" syn sync fromstart
-syn sync minlines=1000 
 
-set nofoldenable 
+" set nofoldenable
 "set foldmethod=syntax
-set foldmethod=manual
+set foldmethod=indent
+set foldlevel=20
+
+let g:gitgutter_escape_grep = 1
+
 " 恢复上次文件打开位置
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 
+
+" 自动加载修改过的文件
+set autoread
 
 vnoremap <Leader>y "+y        " 设置快捷键将选中文本块复制至系统剪贴板
 nnoremap <Leader>p "+p            " 设置快捷键将系统剪贴板内容粘贴至vim
@@ -287,7 +307,11 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 nmap     <C-F>f <Plug>CtrlSFPrompt
 " 预设视图 normal/compact
 let g:ctrlsf_default_view_mode = 'normal'
-
+" g:ctrlsf_default_root defines how CtrlSF find search root when no explicit
+" path is given. Two possible values are cwd and project. cwd means current
+" working directory and project means project root. CtrlSF locates project
+" root by searching VCS root (.git, .hg, .svn, etc.)
+let g:ctrlsf_default_root = 'project'
 
 
 " 批量编辑 multiple selections vor vim
@@ -311,6 +335,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+
 " Valloric/MatchTagAlways
 
 " This option holds all the filetypes for which this plugin will try to find and highlight enclosing tags.
@@ -328,6 +353,7 @@ nnoremap <leader>% :MtaJumpToOtherTag<cr>
 " posva/vim-vue
 " My syntax highlighting stops working randomly
 autocmd FileType vue syntax sync fromstart
+" autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 "  How can I use NERDCommenter in Vue files?
 let g:ft = ''
@@ -350,3 +376,24 @@ function! NERDCommenter_after()
   endif
 endfunction
 
+" highlight GitGutterAdd ctermfg=White
+" highlight GitGutterDelete ctermfg=White
+" highlight GitGutterChange ctermfg=White
+
+highlight GitGutterAdd ctermbg=Green
+highlight GitGutterDelete ctermbg=Red
+highlight GitGutterChange ctermbg=Yellow
+let g:gitgutter_grep=''
+let g:gitgutter_terminal_reports_focus=0
+set updatetime=100
+
+
+" Syntastic Recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
