@@ -49,6 +49,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'dracula/vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -66,8 +67,10 @@ filetype plugin indent on    " required
 "
 let g:vim_markdown_folding_disabled = 1
 " 配色方案
-
+" 
+color dracula
 set background=dark
+autocmd ColorScheme dracula highlight Normal ctermbg=0
 " 素雅 solarized
 " Plug 'altercation/vim-colors-solarized'
 " colorscheme solarized
@@ -75,11 +78,11 @@ set background=dark
 " 多彩 molokai
 " Plug 'tomasr/molokai' 
 " colorscheme molokai
-
+ 
 " 使用iTerm2
 " 开启 ozh, 使用主题：agnoster
 " 安装Powerline-patched font字体: https://github.com/powerline/fonts 
-colorscheme solarized
+" colorscheme solarized
 
 
 " 复古 phd
@@ -111,7 +114,7 @@ syn sync minlines=1000
 
 set nofoldenable 
 "set foldmethod=syntax
-set foldmethod=manual
+set foldmethod=indent
 " 恢复上次文件打开位置
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 
