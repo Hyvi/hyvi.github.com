@@ -1,11 +1,3 @@
----
-layout: page
-title: Everything About Her 
-header: Everything About Her
-<!-- group: navigation -->
-<!-- weight: 0 -->
----
-{% include JB/setup %}
 
 ### 2017.10.6
 因LP爷爷年纪大了，所以不去韶山了。  

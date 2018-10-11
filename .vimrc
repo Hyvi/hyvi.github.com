@@ -64,6 +64,7 @@ Plugin 'fatih/vim-go'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 " Plugin 'vim-python/python-syntax'
+Plugin 'dracula/vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -86,7 +87,10 @@ syntax  on
 "
 let g:vim_markdown_folding_disabled = 1
 " 配色方案
-
+" 
+color dracula
+set background=dark
+autocmd ColorScheme dracula highlight Normal ctermbg=0
 " 素雅 solarized
 " Plug 'altercation/vim-colors-solarized'
 set background=light
@@ -98,6 +102,11 @@ colorscheme solarized
 " 多彩 molokai
 " Plug 'tomasr/molokai' 
 " colorscheme molokai
+ 
+" 使用iTerm2
+" 开启 ozh, 使用主题：agnoster
+" 安装Powerline-patched font字体: https://github.com/powerline/fonts 
+" colorscheme solarized
 
 " 复古 phd
 " Plug 'tomasr/molokai' 
