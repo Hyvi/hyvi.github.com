@@ -21,6 +21,8 @@
 " 
 let mapleader=";"
 set nocompatible              " be iMproved, required
+set backspace=indent,eol,start
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -64,7 +66,6 @@ Plugin 'fatih/vim-go'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 " Plugin 'vim-python/python-syntax'
-Plugin 'dracula/vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
