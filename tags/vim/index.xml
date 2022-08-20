@@ -1,0 +1,102 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elon`s Blog – vim</title>
+    <link>/tags/vim/</link>
+    <description>Recent content in vim on Elon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: fencview.vim &#43; xshell &#43; vim &#43; 各种中文编码问题</title>
+      <link>/docs/tool/2013-08-13-xshell_vim_encoding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/tool/2013-08-13-xshell_vim_encoding/</guid>
+      <description>
+        
+        
+        &lt;p&gt;c++ 老代码都不是utf-8编码，估计是gb2312或gbk编码，而javascript是utf-8编码&lt;br&gt;
+咋办？&lt;br&gt;
+vim中只设置过&lt;br&gt;
+&amp;ldquo;set encoding=gb2312 termencoding=utf-8 &amp;ldquo;fileencoding=gbk&lt;/p&gt;
+&lt;p&gt;不同编码文件，怎么通过一个设置来搞定呢？ 疑惑！！！&lt;br&gt;
+以前碰到不同文件后缀名能用不同的高亮，不同的格式化。 &lt;br&gt;
+按此逻辑。。。&lt;br&gt;
+不同的文件编码可以用不同的配置咯。&lt;/p&gt;
+&lt;p&gt;google 就如上帝！！！&lt;/p&gt;
+&lt;p&gt;发现了 &lt;a href=&#34;http://edyfox.codecarver.org/html/vim_fileencodings_detection.html&#34;&gt;http://edyfox.codecarver.org/html/vim_fileencodings_detection.html&lt;/a&gt;&lt;br&gt;
+最后提到了统一解决办法 fencview.vim&lt;/p&gt;
+&lt;p&gt;杜绝眼高手低：搞起&lt;/p&gt;
+&lt;p&gt;一个小时&amp;hellip;&lt;br&gt;
+两个小时&amp;hellip;&lt;br&gt;
+搞定&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载插件：fencview&lt;/li&gt;
+&lt;li&gt;配置.vimrc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;encoding&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;utf-8
+&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;termencoding&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;utf-8 &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;fileencoding=utf-8
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;let g:fencview_autodetect=1
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;let&lt;/span&gt; g:fencview_auto_patterns&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后一行注释掉： 因为不注释javascript 文件不高亮。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: VIM 转 VSCODE</title>
+      <link>/docs/tool/2019-03-21-vimvscode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/tool/2019-03-21-vimvscode/</guid>
+      <description>
+        
+        
+        &lt;p&gt;VIM 适合折腾
+VS Code 适合高效率业务开发
+开始学习 VS Code 的快捷键&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;更新记录&#34;&gt;更新记录&lt;/h2&gt;
+&lt;p&gt;2019.07.08 还在用 VIM&amp;hellip; 有毒？&lt;/p&gt;
+&lt;p&gt;2021-10-24 继续使用，发现各种好特性，比如在一行中删除光标后所有字符到有括号&amp;quot;)&amp;quot;，这些技巧提升了效率。以防忘记，统一在这里记录，便于翻阅。&lt;/p&gt;
+&lt;h2 id=&#34;常用的编辑快捷键&#34;&gt;常用的编辑快捷键&lt;/h2&gt;
+&lt;h3 id=&#34;editing&#34;&gt;Editing&lt;/h3&gt;
+&lt;p&gt;To delete forward up to character &amp;lsquo;X&amp;rsquo; type &lt;code&gt;dtX&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To delete forward through character &amp;lsquo;X&amp;rsquo; type &lt;code&gt;dfX&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To delete backward up to character &amp;lsquo;X&amp;rsquo; type &lt;code&gt;dTX&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To delete backward through character &amp;lsquo;X&amp;rsquo; type &lt;code&gt;dFX&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Aligning text with Tabular.vim &lt;code&gt;:tab \/&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;navigation&#34;&gt;Navigation&lt;/h3&gt;
+&lt;h2 id=&#34;历史&#34;&gt;历史&lt;/h2&gt;
+&lt;p&gt;vim-go 为什么错误这么让人不知所措，比如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gorename: can&lt;span style=&#34;color:#a40000&#34;&gt;&amp;#39;&lt;/span&gt;t find package containing
+
+gometalinter: unkown linters: govet, typecheck, unsed, gosimple
+
+--enable-all/--disable-all can not be combined
+
+quickfix 没有显示出来，并且仅仅提示 GoMetaLinter Failed
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;解决办法有很多种，而在不断尝试过程中解决问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对 vim-go 配置详细了解，比如&lt;code&gt;g:go_metalinter_enabled&lt;/code&gt;和&lt;code&gt;g:go_metalinter_autosave_enabled&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;更换最新的版本，比如 vim-go 和 golangci-lint 的最新稳定版本，比如 gorename 最新版本并不支持 go modules 项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不深入了解 vim-go 的原理，用不来 vim-go， 期望：某天能跟 vscode golang 插件一样好用。 不过，在使用 vim-go 的过程中，对静态代码检查工具有了更多了解，比如有对 golang 代码的安全检查：gosec。&lt;/p&gt;
+&lt;p&gt;Updated At Thu Jul 18 13:34:37 2019&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;[1] vimcasts.org Learn Essential Vim Skills&lt;/p&gt;
+&lt;p&gt;[2] Casperfeng&amp;rsquo;s Github: mastering-vim, Tring to become a proficient vim user.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

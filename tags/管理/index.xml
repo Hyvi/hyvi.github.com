@@ -1,0 +1,278 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elon`s Blog – 管理</title>
+    <link>/tags/%E7%AE%A1%E7%90%86/</link>
+    <description>Recent content in 管理 on Elon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Dec 2019 20:27:25 +0800</lastBuildDate>
+    
+	  <atom:link href="/tags/%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Code Review 开始</title>
+      <link>/docs/golang/2019-12-23-code-review/</link>
+      <pubDate>Mon, 23 Dec 2019 20:27:25 +0800</pubDate>
+      
+      <guid>/docs/golang/2019-12-23-code-review/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;整个golang团队20多人，没有code review ，对项目质量、对结果产出、对新人的成长，对团队交流的氛围影响大。 看过&lt;a href=&#34;https://www.infoq.cn/article/QJi1Kqm4pH3UNAqNzl3l&#34;&gt;Google 代码评审规范&lt;/a&gt;，解决了我之前一些疑问和也让我坚定的去Code Review。&lt;br&gt;
+当没有code review时候，要求重构，而重构价值是释放历史包袱，并没有产生任何其他价值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们的提交是这样的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;b8e45c&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slove&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Confilct&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;a39ecd&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FIXS&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;vendor&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7817&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;d14&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;debug&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;67539e2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;debug&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9044356&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slove&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Confilct&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;d47db91&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FIXS&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ss&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8913&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c30&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slove&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Confilct&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;d407d2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FIXS&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;logger&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;b9af055&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;打印日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1124e92&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;打印日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;88&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;d0eac&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;修改log&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#000&#34;&gt;ad0b3dd&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;修改日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aa0740&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;答应日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;824658&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;修改日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;178&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c30c&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;打印日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;在pull request的时候，认真review下所有的commit，该合并得合并，该修改得修改&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;我们的命名是这样的&lt;br&gt;
+这里不截图纪念了.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们的代码分支和发版是这样的&lt;br&gt;
+本地打包,更恶心的是代码不提交本地打包的.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们的单元测试是这样的&lt;br&gt;
+几乎没有&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们开始要做Code Review， 从哪里开始了？&lt;/p&gt;
+&lt;h2 id=&#34;方式&#34;&gt;方式&lt;/h2&gt;
+&lt;p&gt;谁对谁在什么时候用什么方式去做什么？&lt;/p&gt;
+&lt;h3 id=&#34;第一个谁&#34;&gt;第一个“谁”&lt;/h3&gt;
+&lt;h4 id=&#34;代码评审员&#34;&gt;代码评审员&lt;/h4&gt;
+&lt;p&gt;如果项目存在两人或者两人以上开发&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果开发提交代码，则应用项目负责人&lt;/li&gt;
+&lt;li&gt;如果应用负责人也参与开发，则由另外任一一位开发做一次review，然后上一级的负责人做第二次review。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果应用负责人和开发是同一个人，这时候为“小组Leader”&lt;/p&gt;
+&lt;h4 id=&#34;自动lint工具&#34;&gt;自动Lint工具&lt;/h4&gt;
+&lt;p&gt;借助自动化完成代码最基本的审核， 比如reviewdog &amp;amp; golangci-lint， 更多相关知识&lt;a href=&#34;https://github.com/reviewdog/action-golangci-lint&#34;&gt;Github Action-golangci-lint&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第二个谁&#34;&gt;第二个“谁”&lt;/h3&gt;
+&lt;p&gt;业务开发人员对应用提交的pull request&lt;/p&gt;
+&lt;h3 id=&#34;什么时候&#34;&gt;什么时候&lt;/h3&gt;
+&lt;p&gt;提交Review时的当天或者第二天须完成&lt;/p&gt;
+&lt;h3 id=&#34;什么方式&#34;&gt;什么方式&lt;/h3&gt;
+&lt;p&gt;依照代码审核规范， 目前缺少自己的审核规范，
+类似规范参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码审查规范
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/QJi1Kqm4pH3UNAqNzl3l&#34;&gt;Google 代码评审规范&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jimmysong.io/eng-practices/&#34;&gt;谷歌工程实践 by jimmysong&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;代码规范[golang]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bwplotka.dev/2020/how-thanos-would-program-in-go/&#34;&gt;How Thanos Would Program in Go&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;参考runutil包解决defer中error的检查问题, 相比写匿名函数更加的优雅&lt;/li&gt;
+&lt;li&gt;包 &lt;code&gt;pkg/errors&lt;/code&gt; 比标准的&lt;code&gt;fmt.Errorf&lt;/code&gt; + &lt;code&gt;%w&lt;/code&gt;更可读&lt;/li&gt;
+&lt;li&gt;待补充&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;做什么&#34;&gt;做什么&lt;/h3&gt;
+&lt;p&gt;阅读提交的代码并给出建议完成审核&lt;/p&gt;
+&lt;h2 id=&#34;落地&#34;&gt;落地&lt;/h2&gt;
+&lt;h3 id=&#34;reviewdog--golangci-lint在gitlab上配置实践&#34;&gt;reviewdog &amp;amp; golangci-lint在gitlab上配置实践&lt;/h3&gt;
+&lt;p&gt;熟悉github action方式， 借鉴其优点； 在一个项目中实践，然后推广到其他项目中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何做到所有项目不需要自行配置或者简单的配置（比如增加一个配置现成的文件），并且使用同一个套代码检查标准？
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;制作包含reviewdog.yml的配置文件，如果做linter升级的话，更新tag为latest最新的镜像即可.&lt;/del&gt;, 已经完成了&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;在一半的项目上增加reviewdog&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;目前linter设置为golint和errcheck方式, 下一步增加golangci-lint检查代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;目前没有非常成熟的方案，需要花费一些时间去解决现有开源方案中的问题。
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;reviewdog 结合 golangci-lint 使用，修改其输出格式, &lt;a href=&#34;https://gitlab.com/Hyvi/reviewdog-test/-/blob/gitlab-ci-test2/.gitlab-ci.yml&#34;&gt;more link&lt;/a&gt;&lt;/em&gt;
+在&lt;a href=&#34;https://github.com/calmato/presto-pay/blob/master/api/user/Makefile&#34;&gt;presto-pay&lt;/a&gt;是使用golangci-lint,但是reviewdog在官网上没有golangci-lint的案例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;失败&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;golangci-lint自身大而全的能力，导致其功能本身不稳定，不如golint或errcheck那么纯粹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reviewdog--golinterrcheckgovet-在-gitlab-上配置实践&#34;&gt;reviewdog &amp;amp; golint/errcheck/govet/&amp;hellip; 在 gitlab 上配置实践&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;reviewdog&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;stage&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;review&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 自定义镜像, 包含统一的reviewdog配置文件和需要安装的reviewdog/golangci-lint版本&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;golang:custom-latest&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;before_script&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v0.10.0&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.27.0&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;export GITLAB_API=&amp;#34;https://examplegitlab.com/api/v4&amp;#34;  &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;reviewdog -conf=/etc/reviewdog/reviewdog.yml  -reporter=gitlab-mr-discussion  -guess -fail-on-error=true&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;only&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;merge_requests&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;reviewdog.yml 配置如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;runner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;golangci&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;cmd&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;golangci-lint run --config=/etc/reviewdog/golangci/golangci.yml ./...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;errorformat&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#39;%E%f:%l:%c&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;%m&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#39;%E%f:%l&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;%m&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;%C%.%#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;level&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;warning&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;更多：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reviewdog 结合各种错误检查，详细见: &lt;a href=&#34;https://gitlab.com/reviewdog/reviewdog/-/blob/master/.reviewdog.yml&#34;&gt;reviewdog.yml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用预设的errformat, 例如通过参数&lt;code&gt;-f=golangci-lint&lt;/code&gt;，更多的预设errformat使用 &lt;code&gt;reviewdog -list&lt;/code&gt; 查看， 点击链接&lt;a href=&#34;https://github.com/reviewdog/errorformat/blob/master/fmts/go.go&#34;&gt; go.go &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在gitlab里配置参考gitlab上的工程：&lt;a href=&#34;https://gitlab.com/Hyvi/reviewdog-test/-/blob/gitlab-ci-test2/.gitlab-ci.yml&#34;&gt;reviewdog test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;exit code的处理
+&lt;ul&gt;
+&lt;li&gt;errcheck 命令在检查到 err 时，exit code为0 （通过echo $?查看, 更多查看&lt;a href=&#34;https://www.tldp.org/LDP/abs/html/exit-status.html#EXITSTATUSREF&#34;&gt;Chapter 6. Exit and Exit Status&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;reviewdog默认的 exit code 为0， 当加上 -fail-on-error=true时候则会返回1（当检查到不规范的时候）&lt;/li&gt;
+&lt;li&gt;errcheck | reviewdog  根据现象是当errcheck 的 exit code 为1时，job会失败。 解决办法是 ( errcheck 2&amp;gt;&amp;amp;1 || true ) | reviewdog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这个过程中，不断增加的检查机制, 并说明理由\目的&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thanos-io/thanos&#34;&gt;thanos&lt;/a&gt; 代码规范推荐的代码 linter 工具 &lt;code&gt;go vet&lt;/code&gt;, 同时也推荐 golangci-lint,
+但 golangci-lint 无法配置的原因, 将考虑一个个配置其默认的 &lt;a href=&#34;https://golangci-lint.run/usage/linters/&#34;&gt;linter&lt;/a&gt; , 建议参考Thanos 里配置的 &lt;a href=&#34;https://www.bwplotka.dev/2020/how-thanos-would-program-in-go/#golangci-lint&#34;&gt;linters&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;govet&lt;/li&gt;
+&lt;li&gt;errcheck&lt;/li&gt;
+&lt;li&gt;staticcheck&lt;/li&gt;
+&lt;li&gt;unused&lt;/li&gt;
+&lt;li&gt;gosimple&lt;/li&gt;
+&lt;li&gt;structcheck&lt;/li&gt;
+&lt;li&gt;varcheck&lt;/li&gt;
+&lt;li&gt;ineffassign&lt;/li&gt;
+&lt;li&gt;deadcode&lt;/li&gt;
+&lt;li&gt;typecheck&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;golint&#34;&gt;golint&lt;/h4&gt;
+&lt;h4 id=&#34;errcheck&#34;&gt;errcheck&lt;/h4&gt;
+&lt;h4 id=&#34;go-vet&#34;&gt;go vet&lt;/h4&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;p&gt;反复阅读代码评审规范.
+不断增加或修正 linter&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;reviewdog
+&lt;a href=&#34;https://github.com/reviewdog/reviewdog#reporter-github-pullrequest-review-comment--reportergithub-pr-review&#34;&gt;https://github.com/reviewdog/reviewdog#reporter-github-pullrequest-review-comment--reportergithub-pr-review&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;golangci-lint
+&lt;a href=&#34;https://github.com/golangci/golangci-lint&#34;&gt;https://github.com/golangci/golangci-lint&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 《卓有成效的管理者》之决策</title>
+      <link>/docs/team/2019-09-14-team-manager-decision/</link>
+      <pubDate>Sat, 14 Sep 2019 15:31:05 +0800</pubDate>
+      
+      <guid>/docs/team/2019-09-14-team-manager-decision/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;任务繁多，&lt;strong&gt;决策&lt;/strong&gt;是其中一项。&lt;br&gt;
+当遇到如何决策的时候，特别费脑，不知道如何决定，应该是不知道如何去决定的。缺少思路，被各种杂乱无章的问题围绕，跳不出来，也迟迟没有给出最终的决定。&lt;br&gt;
+而通过这边文章，Get一种方式，帮助理清楚思路，快速做出决策。&lt;/p&gt;
+&lt;h2 id=&#34;方法论&#34;&gt;方法论&lt;/h2&gt;
+&lt;p&gt;待补充&lt;/p&gt;
+&lt;h2 id=&#34;后续&#34;&gt;后续&lt;/h2&gt;
+&lt;p&gt;时间管理也是一个问题，工作中事情并不是有计划的单一事项，而是各种无关的事情需要处理。&lt;br&gt;
+如果每天在这种杂乱的事情中周旋，时间长了必定没有任何特别的产出。&lt;br&gt;
+理想的状态是： 保持一条重要事情的主线，其他事情围绕主线可慢可不做的开展。&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 《卓有成效的管理者》之我能贡献什么</title>
+      <link>/docs/team/2019-09-12-team-manager-contribute/</link>
+      <pubDate>Thu, 12 Sep 2019 22:09:34 +0800</pubDate>
+      
+      <guid>/docs/team/2019-09-12-team-manager-contribute/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;最近思考的一个问题之一： 怎么让团队有明显的产出，虽然有这个问题，但又因为日常工作中的琐事太多，往往很少有时间去思考这个问题。时间久了慢慢忘记了，特此在此记录下来。&lt;/p&gt;
+&lt;p&gt;标题来自《卓有成效的管理者》by 彼得·德鲁克&lt;/p&gt;
+&lt;h2 id=&#34;方法论&#34;&gt;方法论&lt;/h2&gt;
+&lt;h3 id=&#34;what&#34;&gt;WHAT&lt;/h3&gt;
+&lt;p&gt;我能有什么贡献？&lt;/p&gt;
+&lt;h3 id=&#34;why&#34;&gt;WHY&lt;/h3&gt;
+&lt;p&gt;重视贡献是有效性的关键&lt;br&gt;
+重视贡献的管理者，其所作作为是与众不同的&lt;br&gt;
+重视贡献能挖掘工作中尚未发挥的能力&lt;/p&gt;
+&lt;h3 id=&#34;what-1&#34;&gt;WHAT&lt;/h3&gt;
+&lt;h4 id=&#34;贡献&#34;&gt;贡献&lt;/h4&gt;
+&lt;p&gt;管理者若想做点贡献，就必须在这三个方面下功夫。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接成果&lt;/li&gt;
+&lt;li&gt;树立新的价值观以及对这些价值观的重新确认&lt;/li&gt;
+&lt;li&gt;培养和开发明天所需要的人才&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;who&#34;&gt;WHO&lt;/h3&gt;
+&lt;h4 id=&#34;作为管理者能为这个团队做或贡献什么&#34;&gt;作为管理者，能为这个团队做（或贡献）什么&lt;/h4&gt;
+&lt;h4 id=&#34;作为团队中的成员能为这个团队做或贡献什么&#34;&gt;作为团队中的成员，能为这个团队做（或贡献）什么？&lt;/h4&gt;
+&lt;h3 id=&#34;how&#34;&gt;HOW&lt;/h3&gt;
+&lt;h4 id=&#34;如何使专业人员的工作卓有成效&#34;&gt;如何使专业人员的工作卓有成效&lt;/h4&gt;
+&lt;p&gt;知识分子有责任让别人了解自己。&lt;br&gt;
+“为了便于你为机构作出贡献，你需要我做些什么贡献？ 需要我在什么时候，以哪种形式，用什么方式来提供这些贡献”&lt;/p&gt;
+&lt;h4 id=&#34;正确的人际关系&#34;&gt;正确的人际关系&lt;/h4&gt;
+&lt;h5 id=&#34;相互沟通&#34;&gt;相互沟通：&lt;/h5&gt;
+&lt;p&gt;“我们的组织和我，期望你作出怎样的贡献? 我应该期望你做什么呢？如何使你的知识和能力得到最大的发挥？”&lt;/p&gt;
+&lt;h5 id=&#34;团队合作-强调贡献有助于横向的沟通因此能够促成团队合作&#34;&gt;团队合作： 强调贡献有助于横向的沟通，因此能够促成团队合作&lt;/h5&gt;
+&lt;p&gt;“谁需要我的产出，并使它产生效益”&lt;/p&gt;
+&lt;h5 id=&#34;自我发展-个人能否有所发展很大程度上在于你是否重视贡献&#34;&gt;自我发展： 个人能否有所发展，很大程度上在于你是否重视贡献&lt;/h5&gt;
+&lt;p&gt;“我对组织能有什么最大的贡献”&lt;/p&gt;
+&lt;h5 id=&#34;培养他人-重视贡献的管理者启发他人寻求自我发展&#34;&gt;培养他人： 重视贡献的管理者启发他人寻求自我发展&lt;/h5&gt;
+&lt;p&gt;管理者的标准是以需求任务为基准，要求很高，高度的期望，远大的目标，是具有重大冲击力的工作&lt;/p&gt;
+&lt;h4 id=&#34;有效的会议&#34;&gt;有效的会议&lt;/h4&gt;
+&lt;p&gt;从会议中得到什么，会议的目的是什么，应该是什么&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1359 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elon`s Blog – Tech</title>
+    <link>/categories/tech/</link>
+    <description>Recent content in Tech on Elon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 26 May 2022 16:09:34 +0800</lastBuildDate>
+    
+	  <atom:link href="/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: 云原生模式 CLOUD NATIVE PATTERNS</title>
+      <link>/docs/architecture/2022-05-26-cloud-native-pattern/</link>
+      <pubDate>Thu, 26 May 2022 16:09:34 +0800</pubDate>
+      
+      <guid>/docs/architecture/2022-05-26-cloud-native-pattern/</guid>
+      <description>
+        
+        
+        &lt;p&gt;随着底层基础设施的云原生的流行，对上层应用的开发模式带来了变化：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/ContainerSolutions/cloud-native-patterns/master/assets/images/Screenshot%202020-01-06%20at%2014.07.47.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;refs&#34;&gt;Refs&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Cloud Native Pattern: &lt;a href=&#34;https://github.com/ContainerSolutions/cloud-native-patterns&#34;&gt;https://github.com/ContainerSolutions/cloud-native-patterns&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cornelia Davis: Cloud Native Patterns_ Designing change-tolerant software.pdf&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pini Reznik, Jamie Dobson &amp;amp; Michelle Gienow: cloud-native-transformation-practical-patterns-for-innovation
+&lt;br&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 如何构建基础库</title>
+      <link>/docs/team/2022-05-22-go-library-build/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/team/2022-05-22-go-library-build/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;提供一个库，沉淀共性的功能点。&lt;/p&gt;
+&lt;p&gt;是Library，而不是 Framework。&lt;/p&gt;
+&lt;p&gt;有哪些内容呢？&lt;/p&gt;
+&lt;h2 id=&#34;参考1-gitlab-labkit&#34;&gt;参考1 Gitlab Labkit&lt;/h2&gt;
+&lt;p&gt;LabKit is minimalist library to provide functionality for Go services at GitLab.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Correlation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Loggging&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Masking&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Metrics&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Monitoring&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;FIPS&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tracing&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ErrorTracking&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考2-go-zero&#34;&gt;参考2 go-zero&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;鉴权&lt;/li&gt;
+&lt;li&gt;加解密&lt;/li&gt;
+&lt;li&gt;日志记录&lt;/li&gt;
+&lt;li&gt;异常捕获&lt;/li&gt;
+&lt;li&gt;监控报警&lt;/li&gt;
+&lt;li&gt;数据统计&lt;/li&gt;
+&lt;li&gt;并发控制&lt;/li&gt;
+&lt;li&gt;链路追踪&lt;/li&gt;
+&lt;li&gt;超时控制&lt;/li&gt;
+&lt;li&gt;自动熔断&lt;/li&gt;
+&lt;li&gt;自动降载&lt;/li&gt;
+&lt;li&gt;缓存控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/zeromicro/zero-doc/main/doc/images/architecture.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考3-micro&#34;&gt;参考3 Micro&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://micro.dev/architecture&#34;&gt;Micro Architecture&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://micro.dev/images/micro-3.0.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Wrapppers are a form of middleware that can be used with go-micro services, They can Wrap both the Client and Server handlers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Breaker&lt;/li&gt;
+&lt;li&gt;endpoint&lt;/li&gt;
+&lt;li&gt;Monitoring&lt;/li&gt;
+&lt;li&gt;ratelimiter&lt;/li&gt;
+&lt;li&gt;service&lt;/li&gt;
+&lt;li&gt;trace&lt;/li&gt;
+&lt;li&gt;validator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考4-dapr&#34;&gt;参考4 Dapr&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: OAM 详解</title>
+      <link>/docs/k8s/2020-01-05-oam/</link>
+      <pubDate>Sun, 05 Jan 2020 16:31:55 +0800</pubDate>
+      
+      <guid>/docs/k8s/2020-01-05-oam/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;名词解释&#34;&gt;名词解释&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Actor Pattern (Actor 模型）&lt;/strong&gt;
+来自 Dapr 项目中的一个 concept. &lt;del&gt;Dapr 项目也实现了 OAM 规范&lt;/del&gt;, Dapr 为未来 APP 开发方式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dapr is a progamming model and not an application mdoel, so it operates in a lower abstraction. OAM is intended to solve the problem of modeling an application and all dependencies.&lt;/p&gt;
+&lt;p&gt;Dapr will not model the application&amp;rsquo;s architecture.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;它是一个并行计算的数学模型，最初为由大量独立的微处理器组成的高并行计算机所开发。Actor 模型的理念非常简单： 天下万物皆为 Actor。 Actor 之间通过发送消息来通信， 消息的传递是异步的。每个 Actor 是完全独立的，同时执行它们的操作。&lt;/p&gt;
+&lt;p&gt;当一个 actor 接收到消息后，它能做如下三件事情中一件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create more actors&lt;/li&gt;
+&lt;li&gt;Send messages to other actors&lt;/li&gt;
+&lt;li&gt;Designates what to do with the next message&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多点击链接：&lt;a href=&#34;https://www.brianstorti.com/the-actor-model/&#34;&gt;10 分钟了解 Actor 模型&lt;/a&gt;，这本书也提到《七周七并发模型》，下载了电子版放在 MarginNote 3 里来细读。&lt;/p&gt;
+&lt;p&gt;Dapr 里实现了 Virtual Actor pattern&lt;sup&gt;[2]&lt;/sup&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Dapr actor runtime provides a simple turn-based Access model for accessing actor methods&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Application Developers&lt;/strong&gt;  &amp;ndash; 编写程序实现业务价值，大部分不清楚 k8s 等其他基础设施。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Application Operators&lt;/strong&gt; &amp;ndash; 熟知集群的能力、稳定性、性能，以服务 Developers， 帮助 developer 配置、部署、操作应用（eg, updating, scaling, recovery)。 他们应该被称为 PaaS engineers。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Infra Operators&lt;/strong&gt;  &amp;ndash;  服务 application operators, 应该被称为 IaaS 工程师。&lt;/p&gt;
+&lt;p&gt;OAM 的出现，解决了三者之间的合作问题 (Problems of Cooperation), 存在哪些常见的问题呢？&lt;/p&gt;
+&lt;h3 id=&#34;interactions-between-infra-operators-and-application-operators&#34;&gt;Interactions between Infra Operators and Application Operators&lt;/h3&gt;
+&lt;p&gt;Application operator discover and manage capability that could potentially be in conflict with each other .&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DisCovery the spec of new capability is difficult&lt;/li&gt;
+&lt;li&gt;Confirming the existence of specific capability in a particular cluster is difficult&lt;/li&gt;
+&lt;li&gt;Conflicts in capability could be troublesome
+&lt;ul&gt;
+&lt;li&gt;Orthogonal&lt;/li&gt;
+&lt;li&gt;Composable&lt;/li&gt;
+&lt;li&gt;Conflicting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;oams-traits&#34;&gt;OAM&amp;rsquo;s Traits&lt;/h4&gt;
+&lt;p&gt;In OAM, &amp;ldquo;Traits&amp;rdquo; are how we create capabilities with &lt;strong&gt;discorverability&lt;/strong&gt; and &lt;strong&gt;manageability&lt;/strong&gt;.
+大部分的 traits 为 infra operator 来定义并实现的。&lt;/p&gt;
+&lt;p&gt;需要注意的是，Traits 并不等同于 K8s 插件， 一个集群有多个网络相关的 Traits， 比如“dynamic QoS trait”, “brandwidth control trait” 和 &amp;ldquo;traffic mirror trait&amp;rdquo;, 这些都是通过 CNI Plugin 来提供的。&lt;/p&gt;
+&lt;h3 id=&#34;interactions-between-application-operators-and-application-developers&#34;&gt;Interactions between Application Operators and Application Developers&lt;/h3&gt;
+&lt;p&gt;Developers&#39; Voices Should be Heard&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;several parameters for an application,&lt;/li&gt;
+&lt;li&gt;Cannot be scaled&lt;/li&gt;
+&lt;li&gt;Is a batch job, not a long running service&lt;/li&gt;
+&lt;li&gt;Requires highest level security, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;oams-component&#34;&gt;OAM&amp;rsquo;s Component&lt;/h4&gt;
+&lt;p&gt;In OAM, we try to logically decouple K8s API objects, so developers can fill in their own intentions, and still be able to convey information to operatiors in structured manner.&lt;/p&gt;
+&lt;h4 id=&#34;the-applicationconfiguration&#34;&gt;The ApplicationConfiguration&lt;/h4&gt;
+&lt;p&gt;ApplicationConfiguration 实例化应用，牵涉到 Component&amp;rsquo;s 名称和所应用到 Traits&lt;/p&gt;
+&lt;p&gt;合作流程的方式 ：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基础平台提供不同的 workload Type&lt;/li&gt;
+&lt;li&gt;开发者选择 workload type 定义 component.yaml&lt;/li&gt;
+&lt;li&gt;Application operator 执行 &lt;code&gt;kubectl apply -f component.yaml&lt;/code&gt; 安装这个 component&lt;/li&gt;
+&lt;li&gt;Application operator 定义 ApplicationConfiguration 实例化这个应用。&lt;/li&gt;
+&lt;li&gt;最后，Application Operator 执行 &lt;code&gt;kubectl apply -f app-config.yaml&lt;/code&gt; 触发整个应用的部署。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;oam&#34;&gt;OAM&lt;/h2&gt;
+&lt;p&gt;A specification for describing applications as well as its operational capabilities,&lt;/p&gt;
+&lt;p&gt;In OAM, an Application is made from three core concepts,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The first is the Components, which might a collection of microservices, a database and a cloud load balancer&lt;/li&gt;
+&lt;li&gt;the second concept is a collection of Traits which describe the operational characteristics of the application such as capabilities like auto-scaling and ingress.&lt;/li&gt;
+&lt;li&gt;Finally, to transform these descriptions into a concrete application, operators use a configuration file to assemble components with corresponding traits to form a specific instance of an application.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/oam-dev/spec/raw/master/assets/how-it-works.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;traits&#34;&gt;Traits&lt;/h3&gt;
+&lt;p&gt;represents a piece of add-on functionality that attaches to a component instance,
+such as traffic routing rules(including load balancing policy, network ingress routing, circuit breaking, rate limiting) , auto-scaling policies, upgrade strageies, and more .&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/oam-dev/rudr/raw/master/docs/media/traitcomic.PNG&#34; alt=&#34;traits schematic comic&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;component&#34;&gt;Component&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.infoq.com/articles/oam-alibaba/en/resources/1The-Open-Application-Model-from-Alibaba-s-Perspective-1-1576678834717.jpg&#34; alt=&#34;Components&#34;&gt;&lt;/p&gt;
+&lt;p&gt;三部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Workload 描述：怎么运行这个组件 (component)&lt;/li&gt;
+&lt;li&gt;Component 描述： 运行的是什么东西&lt;/li&gt;
+&lt;li&gt;一组可重写的参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;workload-type-内置类型&#34;&gt;Workload Type 内置类型&lt;/h4&gt;
+&lt;p&gt;如何选择内置的 workload type，根据三个方面来决定（如下）， 当然也可以扩展类型。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does this component expose service endpoint or not ?&lt;/li&gt;
+&lt;li&gt;Is this component relicable or not&lt;/li&gt;
+&lt;li&gt;Is this component long-runtime or one-time ( is daemonized or not )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.infoq.com/articles/oam-alibaba/en/resources/1The-Open-Application-Model-from-Alibaba-s-Perspective-2-1576678834385.jpg&#34; alt=&#34;workload type&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;overwritable-parameter&#34;&gt;Overwritable parameter&lt;/h4&gt;
+&lt;p&gt;to operators, which part of my app definition is overridable&lt;/p&gt;
+&lt;h3 id=&#34;applicationconfiguration&#34;&gt;ApplicationConfiguration&lt;/h3&gt;
+&lt;p&gt;Application Configuration 的一个简单例子如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;apiVersion&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;core.oam.dev/v1alpha1&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;kind&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;ApplicationConfiguration&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;metadata&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;my-awesome-app&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;spec&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;components&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;componentName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;nginx&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;instanceName&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;web-front-end&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;parameterValues&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;connections&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4096&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;traits&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;auto-scaler&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;properties&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;minimum&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;maximum&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;10&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;        &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;security-policy&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;          &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;properties&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;            &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;allowPrivilegeEscalation&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;parameterValues &amp;ndash; Operator 使用这个字段来复写&lt;code&gt;connections&lt;/code&gt;的值为 4096&lt;/li&gt;
+&lt;li&gt;Trait &lt;code&gt;auto-scaler&lt;/code&gt; &amp;ndash; operator apply autoscaler trait (e.g. HPA) to the component.&lt;/li&gt;
+&lt;li&gt;Trait &lt;code&gt;security-policy&lt;/code&gt; &amp;ndash; operator 应用安全策略规则到 component&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: operator 可以增加更多的 traits 到列表， 比如可以增加&amp;rsquo;Canary Deployment Trait&#39; 使应用更新符合 canary rollout strategy.&lt;/p&gt;
+&lt;h3 id=&#34;scopes&#34;&gt;Scopes&lt;/h3&gt;
+&lt;p&gt;Application scopes are used to logically group components together by providing application boundaries that represent common group behaviors and/or dependencies.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/oam-dev/rudr/master/docs/media/appscopecomic.PNG&#34; alt=&#34;why scopes&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/oam-dev/rudr/blob/master/docs/concepts/scopes.md&#34;&gt;rudr scopes&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rudr-实践&#34;&gt;Rudr 实践&lt;/h2&gt;
+&lt;p&gt;缺国外云上的 k8s 环境，用于实践。
+根据 &lt;a href=&#34;https://github.com/oam-dev/rudr/tree/master/docs&#34;&gt;rudr doc&lt;/a&gt; 实践&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;helm 的使用&lt;/li&gt;
+&lt;li&gt;rudr 目前的情况&lt;/li&gt;
+&lt;li&gt;developer: 如何 Writing a Trait
+&lt;a href=&#34;https://github.com/oam-dev/rudr/blob/master/docs/developer/writing_a_trait.md&#34;&gt;https://github.com/oam-dev/rudr/blob/master/docs/developer/writing_a_trait.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;developer: how to implement your own workload type: support openfaas &amp;amp;&amp;amp; prometheums as first extended workload.
+&lt;a href=&#34;https://github.com/oam-dev/rudr/pull/481&#34;&gt;https://github.com/oam-dev/rudr/pull/481&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装-minikube-deprecated&#34;&gt;安装 minikube (deprecated)&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://minikube.sigs.k8s.io/docs/start/&#34;&gt;minikube start&lt;/a&gt;
+下载 minikube.iso 文件速度太慢了，5kb/s&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;minikube-v1.6.0.iso: 19.92 MiB / 150.93 MiB 13.20% 9.44 KiB p/s ETA 3h56
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;放弃了。
+使用 vultr 上 2c4m 机器来跑&lt;/p&gt;
+&lt;h3 id=&#34;在-vultr-上安装-microk8s&#34;&gt;在 vultr 上安装 microk8s&lt;/h3&gt;
+&lt;p&gt;之前没有使用过 microk8s。也可以使用远程使用公司的电脑。&lt;/p&gt;
+&lt;h4 id=&#34;创建-ubuntu-1804-系统使用-microk8s使用-helm3-安装-rudr&#34;&gt;创建 ubuntu 18.04 系统，使用 microk8s，使用 helm3 安装 rudr&lt;/h4&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://github.com/oam-dev/rudr/blob/master/docs/setup/install.md&#34;&gt;Installing rudr&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;helm3&lt;/strong&gt;
+Github Homepage: &lt;a href=&#34;https://github.com/helm/helm&#34;&gt;https://github.com/helm/helm&lt;/a&gt;
+Helm is a tool for managing Charts. Charts are packages of pre-configured kubernetes resources. Think of it like apt/yum/homebrew for Kubernetes.&lt;/p&gt;
+&lt;p&gt;Charts can be stored on disk, or fetched from remote chart repositories(like Debian or RedHat packages)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;microk8s&lt;/strong&gt;
+Homepage: &lt;a href=&#34;https://github.com/ubuntu/microk8s&#34;&gt;https://github.com/ubuntu/microk8s&lt;/a&gt;
+The smallest, fastest Kubernetes.
+Single-package fully conformant lightweight kubernetes
+Perfect for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developer workstations&lt;/li&gt;
+&lt;li&gt;IoT&lt;/li&gt;
+&lt;li&gt;Edge&lt;/li&gt;
+&lt;li&gt;CI/CD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;snap install microk8s --classic
+
+microk8s.enable helm3
+
+git clone https://github.com/oam-dev/rudr.git
+
+microk8s.helm3 install rudr ./rudr/charts/rudr --wait
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;installing-implementations-for-traits&#34;&gt;Installing Implementations for Traits&lt;/h4&gt;
+&lt;p&gt;Ingress，Manual Scaler, autoscaler
+比如 Ingress，那么从 Helm3 hub 中选择 Ingress 的实现即可。
+同样， autoscaler 选择一种实现 并部署即可。&lt;/p&gt;
+&lt;h4 id=&#34;deploy-a-sample-rudr-application-using-the-tutorial&#34;&gt;Deploy a sample Rudr application using the tutorial&lt;/h4&gt;
+&lt;p&gt;教程： &lt;a href=&#34;https://github.com/oam-dev/rudr/blob/master/docs/tutorials/deploy_and_update.md&#34;&gt;Tutorial: Deploy, inspect, and update a Rudr application and its components&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;比较简单的完成。
+心得： 如果 Traits 比较丰富并且能轻松获取到使用文档的话，对于 Application Operator 来说，是非常方便的对 Application 的加上增强或者限制的功能。&lt;/p&gt;
+&lt;h2 id=&#34;oam-的未来&#34;&gt;OAM 的未来&lt;/h2&gt;
+&lt;p&gt;working with the community on OAM spec as well as K8s implementation&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;[1] Phil Bernstein Sergey Bykov Alan Geller Gabriel Kliot Jorgen Thelin: Orleans: Distributed Virtual Actors for Programmability and Scalability&lt;/p&gt;
+&lt;p&gt;[2] Dapr: Actors overview: Overview of the actors building block&lt;/p&gt;
+&lt;p&gt;[3] The Open Application Model from Alibaba&amp;rsquo;s Perspective &lt;a href=&#34;https://www.infoq.com/articles/oam-alibaba/&#34;&gt;https://www.infoq.com/articles/oam-alibaba/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[4] 开放应用模型 OAM  &lt;a href=&#34;https://www.jianshu.com/p/da9bf3357247&#34;&gt;https://www.jianshu.com/p/da9bf3357247&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[5] A Kubernetes implementation of the Open Application Model specification  &lt;a href=&#34;https://github.com/oam-dev/rudr&#34;&gt;https://github.com/oam-dev/rudr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[6]  Automating Event-Based Continuous Delivery on Kubernetes with &lt;a href=&#34;cd-on-k8s-with-keptn&#34;&gt;keptn&lt;/a&gt;, The keptn project provides a clear separation of concerns, allowing developer, DevOps and site reliability engineers to update delivery pipelines, 这个更加细，包括 SLO 指标、包括 blue\green deploy&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Cloud Computing Service Modeling</title>
+      <link>/docs/architecture/2020-01-02-cloud-computing-service-modeling/</link>
+      <pubDate>Thu, 02 Jan 2020 18:24:11 +0800</pubDate>
+      
+      <guid>/docs/architecture/2020-01-02-cloud-computing-service-modeling/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;2020年需要重新思考架构模型，我们以怎样的方式对外提供服务，是Service， 一起看下有哪些Service吧&lt;/p&gt;
+&lt;h2 id=&#34;service-model&#34;&gt;Service Model&lt;/h2&gt;
+&lt;p&gt;常见的应该有Iaas(Host)、Paas(Build)、Saas(Consume)、Faas, 而在这边文章&amp;quot;Future of Cloud Computing Architectrue&amp;quot;里提到的Service更多类型&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hyvi.github.io/blog-images/20200102/Future%20of%20Cloud%20Computing%20Stack.png&#34; alt=&#34;Cloud Computing Stack&#34;&gt;&lt;/p&gt;
+&lt;p&gt;每一种提供了不同的灵活性和控制，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hyvi.github.io/blog-images/20211002/5-layer-diagram.png&#34; alt=&#34;Saas vs Paas vs Iaas Service Model&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;function-as-a-service-todo&#34;&gt;Function-as-a-service TODO&lt;/h3&gt;
+&lt;h3 id=&#34;software-as-a-service&#34;&gt;Software-as-a-Service&lt;/h3&gt;
+&lt;p&gt;The Saas model 为你的业务提供基于云的web应用的访问能力，无须install new infrastructure&lt;/p&gt;
+&lt;h4 id=&#34;the-twelve-factor-app&#34;&gt;The Twelve-Factor APP&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://12factor.net/&#34;&gt;https://12factor.net/&lt;/a&gt;  为提供Saas服务提供了方法论:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用标准化流程自动配置&lt;/li&gt;
+&lt;li&gt;和操作系统之间尽可能的划清界限，在各个系统中提供&lt;strong&gt;最大的可移植性&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;适合&lt;strong&gt;部署&lt;/strong&gt;在现代的&lt;strong&gt;云计算平台&lt;/strong&gt;， 从而在服务器和系统管理方面节省资源&lt;/li&gt;
+&lt;li&gt;将开发环境和生产环境的差异降至最低，并使用持续交付实施敏捷开发。&lt;/li&gt;
+&lt;li&gt;可以在工具、架构和开发流程不发生明显变化的前提下实现扩展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;身份认真和授权-todo&#34;&gt;身份认真和授权 TODO&lt;/h4&gt;
+&lt;p&gt;License Model for Saas or alias &amp;ldquo;Sass License&amp;rdquo;, 感觉类似“&lt;a href=&#34;https://aws.amazon.com/cn/cognito/dev-resources/&#34;&gt;AWS cognito&lt;/a&gt;”&lt;br&gt;
+vs IAM&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/cn/blogs/china/aws-kms-enables-secure-data-encryption-across-tenants/&#34;&gt;文章展示了AWS各个服务之间的交互逻辑&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;platform-as-a-service&#34;&gt;Platform-as-a-service&lt;/h3&gt;
+&lt;p&gt;With this model, a third-party vendor provides your business with a platform upon which your business can develop and run application.&lt;/p&gt;
+&lt;h3 id=&#34;infrastructure-as-a-service&#34;&gt;Infrastructure-as-a-service&lt;/h3&gt;
+&lt;p&gt;allow your business to have complete, scalable control over the management and customization of your infrastructure .&lt;/p&gt;
+&lt;h2 id=&#34;patterns-in-microservice&#34;&gt;Patterns in microservice&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://res.infoq.com/articles/architecture-trends-2020/en/resources/1Architecture-2020-Q2-1587042627643.jpg&#34; alt=&#34;architecture trends 2020&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;eda&#34;&gt;EDA&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://miro.medium.com/max/468/1*YPhljs4qcqtN08dA54fdwA.png&#34; alt=&#34;Service composition - anit pattern&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tightly coupled, because the calling service needs to know the URL payload and related detail of the service it calls&lt;/li&gt;
+&lt;li&gt;a change in functionality require a coordinated effort between multiple teams&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://miro.medium.com/max/1166/1*TtaEDXMTFpPqHj0a-7lxiw.png&#34; alt=&#34;Event notifications and event-driven architectures&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;asyncapi-todo&#34;&gt;AsyncAPI #TODO&lt;/h3&gt;
+&lt;h3 id=&#34;data-architecture&#34;&gt;Data Architecture&lt;/h3&gt;
+&lt;h4 id=&#34;data-mesh&#34;&gt;Data Mesh&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;the next enterprise data platform architecture is in the convergence of Distributed Domain Driven Architecture, Self-serve Platform Design, and Product Thinking with Data&lt;sup&gt;[5]&lt;/sup&gt;.
+&amp;mdash; Zhamak Dehghani&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;data-gateways&#34;&gt;Data Gateways&lt;/h4&gt;
+&lt;p&gt;somewhat like API gateways but focus on the data aspect.&lt;/p&gt;
+&lt;h3 id=&#34;policy-as-code-todo&#34;&gt;Policy as Code #TODO&lt;/h3&gt;
+&lt;h3 id=&#34;designing-for-___&#34;&gt;Designing for ___&lt;/h3&gt;
+&lt;h4 id=&#34;designing-for-resilience&#34;&gt;Designing for resilience&lt;/h4&gt;
+&lt;h4 id=&#34;designing-for-abservability&#34;&gt;Designing for abservability&lt;/h4&gt;
+&lt;h4 id=&#34;designing-for-portability&#34;&gt;Designing for portability&lt;/h4&gt;
+&lt;p&gt;whether that’s for multi-cloud or hybrid-cloud. In most cases, there are no reasons for architects to design for the lowest common denominator to enable true multi-cloud portability or avoiding vendor lock-in.&lt;/p&gt;
+&lt;h4 id=&#34;designing-for-sustainability&#34;&gt;Designing for sustainability&lt;/h4&gt;
+&lt;p&gt;This is emerging because people are realizing the software industry is responsible for a level of carbon usage comparable to the aviation industry&lt;sup&gt;[6]&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;dapr&#34;&gt;Dapr&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/eJCu6a-x9uo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It is describing as a set of&amp;quot;microservice building blocks for cloud and edge&amp;quot; also is meant to be agnostic&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dapr is completely platform agnostic, meaning you can run your applications locally, on any Kubernetes cluster, and other hosting environments that Dapr integrates with. This enables developers to build microservice applications that can run on both the cloud and edge with no code changes,&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://github.com/dapr/dapr/raw/master/img/overview.png&#34; alt=&#34;Dapr is a portable, event-driven, runtime for building distributed applications across cloud and edge.&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;dapr-building-blocks&#34;&gt;Dapr building blocks&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Service Invocation&lt;/li&gt;
+&lt;li&gt;State management&lt;/li&gt;
+&lt;li&gt;Plubish and subscribe messaging between services&lt;/li&gt;
+&lt;li&gt;Event driven resource bindings&lt;/li&gt;
+&lt;li&gt;Virtual actors &amp;ndash;  A pattern for stateless and stateful objects that make concurrency simple with method and state encapsulation. Dapr provides many capabilities in its virtual actor runtime including concurrency, state, life-cycle management for actor activation/deactivation and timers and reminders to wake up actors&lt;sup&gt;[7]&lt;/sup&gt;.&lt;/li&gt;
+&lt;li&gt;Distributed tracing between services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sidecar-architecture-and-supported-infrastructures&#34;&gt;Sidecar architecture and supported infrastructures&lt;/h4&gt;
+&lt;p&gt;Dapr exposes its APIs as a sidecar architecture, either as a container or as a process, not requiring the application code to include any Dapr runtime code.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cloudblogs.microsoft.com/uploads/prod/2019/10/overview-sidecar.png&#34; alt=&#34;Dapr running as a side-car process&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;multi-cloud-open-components-bindings-pub-sub-state-from-azure-aws-gcp&#34;&gt;Multi-Cloud, open components (bindings, pub-sub, state) from Azure, AWS, GCP&lt;/h4&gt;
+&lt;p&gt;Dapr is completely platform agnostic, meaning you can run your applications locally, on any Kubernetes cluster, and other hosting environments that Dapr integrates with. This enables developers to build microservice applications that can run on both the cloud and edge with no code changes.&lt;/p&gt;
+&lt;h2 id=&#34;principles-in-microservice&#34;&gt;Principles in Microservice&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Create an organizational model that provide independence and antonomy to teams&lt;/li&gt;
+&lt;li&gt;services are independently deployable&lt;/li&gt;
+&lt;li&gt;services are independently scalable&lt;/li&gt;
+&lt;li&gt;they do not have a single point of failure - only degradation&lt;/li&gt;
+&lt;li&gt;the design employ asynchronous communication between services&lt;/li&gt;
+&lt;li&gt;no shared functionality , code or data exists in the system .&lt;/li&gt;
+&lt;li&gt;Component are easy to understand and the are small services with boundary&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;思考&#34;&gt;思考&lt;/h2&gt;
+&lt;p&gt;接触到“AWS解决方案架构师”，负责企业客户应用在AWS的架构咨询和设计。在微服务架构设计，数据库等领域有丰富的经验。&lt;br&gt;
+是技术产品还是技术架构师呢？ 那AWS这些云产品由什么位置来规划的？&lt;br&gt;
+是技术架构师又偏技术业务，这是云服务架构师的之路, 最后做技术架构咨询。&lt;/p&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;p&gt;[ ] 企业软件架构模式，见kami app&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;[1] &lt;a href=&#34;https://www.sjsu.edu/people/robert.chun/courses/CS247/s4/I.pdf&#34;&gt;Futrue of Cloud Computing Architecture.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] IBM: IaaS vs. PaaS vs. SaaS, Understand and compare the three most popular cloud computing service models&lt;/p&gt;
+&lt;p&gt;[3] InfoQ: Software Architecture and Design InfoQ Trends Report—April 2020&lt;/p&gt;
+&lt;p&gt;[4] InfoQ 趋势报告：架构和设计领域技术演变详解 2019&lt;/p&gt;
+&lt;p&gt;[5] Zhamak Dehghani: How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh&lt;/p&gt;
+&lt;p&gt;[6] Thomas Betts, Holly Cummins: Software Architecture and Design InfoQ Trends Report &amp;ndash; April 2021&lt;/p&gt;
+&lt;p&gt;[7] Microsoft Open Source Blog: Announcing Distributed Application Runtime (Dapr), an open source project to make it easier for every developer to build microservice applications&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 抓包工具分析之完全攻略</title>
+      <link>/docs/tool/2019-12-31-debug-by-wireshark/</link>
+      <pubDate>Tue, 31 Dec 2019 11:45:50 +0800</pubDate>
+      
+      <guid>/docs/tool/2019-12-31-debug-by-wireshark/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;抓包分析是调式前后端协议的杀手锏，用好工具节省大量的时间去写代码优化代码。&lt;/p&gt;
+&lt;h2 id=&#34;名词解释&#34;&gt;名词解释&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;HTTP Strict transport security(HSTS)&lt;/strong&gt;&lt;br&gt;
+HTTP严格传输安全&lt;br&gt;
+HSTS禁止浏览器使用无效证书。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Certificate Transparency&lt;/strong&gt;&lt;br&gt;
+为了解决CA存在的问题（故意或者恶意签发证书等），目的是提供一种开发的审计和监控系统，可以让任何域名所有者或者CA确定证书是否被错误签发或者被恶意使用，从而提供HTTPS网站的安全性。&lt;br&gt;
+&lt;a href=&#34;https://www.certificate-transparency.org/how-ct-works&#34;&gt; how ct works &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTTP Public Key Pinning&lt;/strong&gt;&lt;br&gt;
+用来防范由「伪造或不正当的手段获得网站证书」造成中间人攻击。&lt;br&gt;
+工作原理： 通过响应头或者&lt;meta&gt;标签告诉浏览器当前网站的证书指纹，以及过期时间等其他信息.&lt;br&gt;
+Google已经针对不验证服务器证书的APP给出了警告，这些APP将来会有被Play store拒之门外的危险,&lt;a href=&#34;https://support.google.com/faqs/answer/6346016?hl=en&#34;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Chrome 69 版本开始移除对HPKP的支持&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;OCSP Stapling&lt;/strong&gt;&lt;br&gt;
+OCSP(Online Certifacte Status Protocol, 在线证书状态协议)是用来检验证书合法性的在线查询服务。&lt;br&gt;
+TLS握手阶段，实时查询OCSP接口，并在获得结果前阻塞后续流程。但导致建立TLS连接时间变得更长。 而 OCSP Stapling, 是服务器主动获取OCSP查询结果并随着证书一起发给客户端，从而让客服端跳过自己去验证的过程，提高TLS握手效率&lt;/p&gt;
+&lt;h2 id=&#34;工具&#34;&gt;工具&lt;/h2&gt;
+&lt;p&gt;有fiddler, charles, wiresharks,&lt;/p&gt;
+&lt;h3 id=&#34;fiddler&#34;&gt;fiddler&lt;/h3&gt;
+&lt;p&gt;使用中间人（man-in-middle）的方式来实现的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地化的工具，是一个使用本地127.0.0.1:8888 的HTTP代理。
+~任何能够设置HTTP代理为127.0.0.1:8888的浏览器和应用程序都可以使用Fiddler~&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;为什么不能代理所有的http请求&#34;&gt;为什么不能代理所有的HTTP请求&lt;/h4&gt;
+&lt;p&gt;因为在操作系统层面，没有“HTTP request”这一概念，只有TCP连接。&lt;br&gt;
+Contacting a HTTP proxy means changing the HTTP request slightly as well as contacting the proxy server instead of the host named in the URL.&lt;br&gt;
+所以这个逻辑是写在发送HTTP requests的软件代码里。&lt;br&gt;
+curl和wget有他们自己的实现HTTP Request的代码，并使用了自己的配置文件（-x选项）。两者都没有实现基于配置的逻辑，也没有使用Mac OS 系统提供的HTTP Libraries(这个库使用了代理设置）&lt;/p&gt;
+&lt;h3 id=&#34;charles&#34;&gt;charles&lt;/h3&gt;
+&lt;p&gt;原理类似fiddler，但是mac上使用的简单的工具.&lt;/p&gt;
+&lt;h3 id=&#34;mitmproxy&#34;&gt;mitmproxy&lt;/h3&gt;
+&lt;p&gt;原理是中间人的方式来实现, 再加个proxy, 中间人代理软件，可以用来拦截、修改、保存HTTP/HTTPS请求。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An interactive console program than allows traffic flows to be intercepted, inspected, modified and replayed.
+优点是可自定制化开发，命令行模式，适合code geek和键盘控&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Regurlar&lt;/li&gt;
+&lt;li&gt;Transparent&lt;/li&gt;
+&lt;li&gt;Reverse Proxy&lt;/li&gt;
+&lt;li&gt;Upstream Proxy&lt;/li&gt;
+&lt;li&gt;SOCKS Proxy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.mitmproxy.org/stable/schematics/proxy-modes-flowchart.png&#34; alt=&#34; Modes of Operation&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;透明代理&#34;&gt;透明代理&lt;/h4&gt;
+&lt;p&gt;重定向机制，可以将目的地为Internet上的服务器的TCP连接透明地重新路由到侦听代理服务器上。这通常采用与代理服务器相同的主机上的防火墙形式。比如Linux下的iptables\或者OSX中的pf。具体如何操作见参考中的&amp;quot;Mac 上使用mitmproxy对ios app进行抓包”&lt;/p&gt;
+&lt;h4 id=&#34;安装和使用&#34;&gt;安装和使用&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;http://rui0.cn/archives/498&#34;&gt;MitmProxy 使用教程 for MAC&lt;/a&gt;&lt;br&gt;
+更关心&lt;a href=&#34;https://docs.mitmproxy.org/stable/howto-transparent/#macos&#34;&gt;Transparent Proxying使用&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;transparent-proxying-在mac上实践&#34;&gt;Transparent Proxying 在Mac上实践&lt;/h5&gt;
+&lt;p&gt;参考官方文档，对mac下进行全局抓包的尝试。如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable IP forwarding.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo sysctl -w net.inet.ip.forwarding&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Place the following two lines in &lt;strong&gt;/etc/pf.conf&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rdr pass on en0 inet proto tcp to any port &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt;80, 443&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt; -&amp;gt; 127.0.0.1 port &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8080&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This rule tells pf to redirect all traffic destined for port 80 or 443 to the local mitmproxy instance running on port 8080. You should replace &lt;code&gt;en0&lt;/code&gt; with the interface on which your test device will appear.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rdr rules in pf.conf above apply only to inbound traffic. They will NOT redirect traffic coming from the box running pf itself.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Configure pf with the rules.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pfctl -f pf.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Mac系统默认使用/etc/pf.conf， 调式完之后需要重置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;And now enable it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pfctl -e
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Fire up mitmproxy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You probably want a command like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mitmproxy --mode transparent  --showhost
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;--mode transparent&lt;/code&gt; option turns on transparent mode, and the &lt;code&gt;--showhost&lt;/code&gt; argument tells
+mitmproxy to use the value of the Host header for URL display.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Finally, configure your test device.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Set the test device up to use the host on which mitmproxy is running as the default gateway and install the mitmproxy certificate authority on the test device&lt;/p&gt;
+&lt;p&gt;到此, 可以抓包en0显卡上的流量, 但是抓包不了Mac本地上的流量。&lt;br&gt;
+但是这并没有解决抓包APP里HTTPS的流量问题，因为出现如下错误：&lt;br&gt;
+“ warn: 192.168.2.3:56243: Client Handshake failed. The client may not trust the proxy&amp;rsquo;s certificate for e.crashlytics.com.  &amp;quot;&lt;br&gt;
+解决办法见： &amp;ldquo;破解SSL Pinning&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;另外上述方法也没有办法抓包本机电脑上的流量； 需要进一步设置： &lt;a href=&#34;https://docs.mitmproxy.org/stable/howto-transparent/&#34;&gt;Work-around to redirect traffic originating from the machine itself&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pf解决Mac自身流量抓包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##The ports to redirect to proxy&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;redir_ports&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;{http, https}&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##The address the transparent proxy is listening on&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;tproxy&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;127.0.0.1 port 8080&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##The user the transparent proxy is running as&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;tproxy_user&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;nobody&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##The users whose connection must be redirected.&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##This cannot involve the user which runs the&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##transparent proxy as that would cause an infinite loop.&lt;/span&gt;
+&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;##&lt;/span&gt;
+
+rdr pass proto tcp from any to any port &lt;span style=&#34;color:#000&#34;&gt;$redir_ports&lt;/span&gt; -&amp;gt; &lt;span style=&#34;color:#000&#34;&gt;$tproxy&lt;/span&gt;
+pass out route-to &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;lo0 127.0.0.1&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;)&lt;/span&gt; proto tcp from any to any port &lt;span style=&#34;color:#000&#34;&gt;$redir_ports&lt;/span&gt; user &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;{&lt;/span&gt; !&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;$tproxy_user&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;转发处理nobody之外的所有用户的流量到mitmproxy上。 为了避免循环，所以以nobody用户身份来启动mitmproxy。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo -u nobody mitmproxy --mode transparent --showhost
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;** 发现有些流量不见了 **
+排查发现因为wifi下启用了socks代理，导致一些流量不见了, 转发到shadowsocks socks5代理去了。&lt;/p&gt;
+&lt;h5 id=&#34;使用socks5的方式抓包所有的流量&#34;&gt;使用socks5的方式抓包所有的流量&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/aaddevsup/2018/04/11/tracing-all-network-machine-traffic-using-mitmproxy-for-mac-osx/&#34;&gt;Tracing All Network Machine Traffic Using MITMProxy for Mac OSX&lt;/a&gt;&lt;br&gt;
+跟regular proxy一样，需要client/应用支持或者更改。比如chrome更改网络方式为代理模式。比如不能对Curl的请求抓包不了&lt;br&gt;
+同理，socks5也存在透明代理，不过实现的方式不一样, 比如tsocks&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;tsocks provides transparent network access through a SOCKS version 4 or 5 proxy (usually on a firewall). tsocks intercepts the calls applications make to establish TCP connections and transparently proxies them as necessary.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;破解https的ssl-pinning-todo&#34;&gt;破解https的SSL Pinning TODO&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://crifan.github.io/app_capture_package_tool_charles/website/how_capture_app/complex_https/https_ssl_pinning/&#34;&gt;APP上破解https的SSL Pinning&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;wireshark&#34;&gt;wireshark&lt;/h3&gt;
+&lt;p&gt;抓取网卡上的所有TCP、UDP的数据&lt;/p&gt;
+&lt;h4 id=&#34;https的解密&#34;&gt;HTTPS的解密&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;通过私钥来解密, 咨询过运维，这种私钥是没办法提供的。  参考这边文档： &lt;a href=&#34;https://wiki.wireshark.org/TLS&#34;&gt;How to Decrypt SSL and TLS Traffic Using Wireshark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;适合浏览器&lt;/code&gt;通过设置环境变量截取浏览器的pre_master_secret,进而实现解密HTTPS的目的。 &lt;a href=&#34;https://www.cnblogs.com/yurang/p/11505741.html&#34;&gt;wireshark两种解密https方式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;也只适合浏览器，其他客户端发送出的请求无法解密&lt;/code&gt; 通过mitmproxy来获取SSLKEYLOGFILE， 参考 &lt;a href=&#34;https://docs.mitmproxy.org/stable/howto-wireshark-tls/&#34;&gt;Wireshark and SSL/TLS Master Secrets&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This mechanism (SSLKEYLOGFILE) currently(2019) does not work for Safari, Microsoft Edge, and others since their TLS libraries (Microsoft SChannel / Apple SecureTransport) do not suppport this mechanism.&lt;br&gt;
+This mechanism works for applications other than web browser as will but it dependent on the TLS Libraries used by application. Examples of applications:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Applicaitons using OPENSSL conld use &lt;code&gt;GDB or a LB_PRELOAD trick&lt;/code&gt; to extract the secrets .&lt;/li&gt;
+&lt;li&gt;For Java programs&lt;/li&gt;
+&lt;li&gt;Python scripts can be edited to dump keys as well&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;在Trello上记录所有待办事项。&lt;br&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/47003094&#34;&gt;常用的HTTP抓包工具Fiddler之使用技巧&lt;/a&gt;  &lt;br&gt;
+&lt;a href=&#34;https://imququ.com/post/how-to-decrypt-https.html&#34;&gt;三种解密HTTPS流量的方法&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://program-think.blogspot.com/2019/04/Proxy-Tricks.html#head-6&#34;&gt;杀手锏：如果让不支持代理的软件，通过代理进行联网&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.javazhiyin.com/42166.html&#34;&gt;如何使用透明代理抓HTTPS&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.zoulei.net/2018/05/25/mitmproxy_transparent_model_network_capture/&#34;&gt;Mac 上使用mitmproxy对ios app进行抓包&lt;/a&gt; 比较详细的操作&lt;br&gt;
+&lt;a href=&#34;https://superuser.com/questions/398977/how-can-i-run-all-http-requests-through-charles-web-debugging-proxy-including&#34;&gt;怎么让charles能代理所有的http(s)的请求呢？&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imququ.com/post/http-public-key-pinning.html&#34;&gt;HTTP Public Key Pinning 介绍&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://crifan.github.io/app_capture_package_tool_charles/website/&#34;&gt;app 抓包利器.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Code Review 开始</title>
+      <link>/docs/golang/2019-12-23-code-review/</link>
+      <pubDate>Mon, 23 Dec 2019 20:27:25 +0800</pubDate>
+      
+      <guid>/docs/golang/2019-12-23-code-review/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;整个golang团队20多人，没有code review ，对项目质量、对结果产出、对新人的成长，对团队交流的氛围影响大。 看过&lt;a href=&#34;https://www.infoq.cn/article/QJi1Kqm4pH3UNAqNzl3l&#34;&gt;Google 代码评审规范&lt;/a&gt;，解决了我之前一些疑问和也让我坚定的去Code Review。&lt;br&gt;
+当没有code review时候，要求重构，而重构价值是释放历史包袱，并没有产生任何其他价值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们的提交是这样的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;b8e45c&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slove&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Confilct&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;a39ecd&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FIXS&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;vendor&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7817&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;d14&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;debug&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;67539e2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;debug&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;9044356&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slove&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Confilct&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;d47db91&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FIXS&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ss&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;8913&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c30&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Slove&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;Confilct&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;d407d2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;FIXS&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;logger&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span style=&#34;color:#000&#34;&gt;b9af055&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;打印日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1124e92&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;打印日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;88&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;d0eac&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;修改log&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#000&#34;&gt;ad0b3dd&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;修改日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;4&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;aa0740&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;答应日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;824658&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;修改日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;178&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;c30c&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;打印日志&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt;  &lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;7&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;weeks&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;ago&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;-&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;在pull request的时候，认真review下所有的commit，该合并得合并，该修改得修改&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;我们的命名是这样的&lt;br&gt;
+这里不截图纪念了.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们的代码分支和发版是这样的&lt;br&gt;
+本地打包,更恶心的是代码不提交本地打包的.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我们的单元测试是这样的&lt;br&gt;
+几乎没有&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们开始要做Code Review， 从哪里开始了？&lt;/p&gt;
+&lt;h2 id=&#34;方式&#34;&gt;方式&lt;/h2&gt;
+&lt;p&gt;谁对谁在什么时候用什么方式去做什么？&lt;/p&gt;
+&lt;h3 id=&#34;第一个谁&#34;&gt;第一个“谁”&lt;/h3&gt;
+&lt;h4 id=&#34;代码评审员&#34;&gt;代码评审员&lt;/h4&gt;
+&lt;p&gt;如果项目存在两人或者两人以上开发&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果开发提交代码，则应用项目负责人&lt;/li&gt;
+&lt;li&gt;如果应用负责人也参与开发，则由另外任一一位开发做一次review，然后上一级的负责人做第二次review。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果应用负责人和开发是同一个人，这时候为“小组Leader”&lt;/p&gt;
+&lt;h4 id=&#34;自动lint工具&#34;&gt;自动Lint工具&lt;/h4&gt;
+&lt;p&gt;借助自动化完成代码最基本的审核， 比如reviewdog &amp;amp; golangci-lint， 更多相关知识&lt;a href=&#34;https://github.com/reviewdog/action-golangci-lint&#34;&gt;Github Action-golangci-lint&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第二个谁&#34;&gt;第二个“谁”&lt;/h3&gt;
+&lt;p&gt;业务开发人员对应用提交的pull request&lt;/p&gt;
+&lt;h3 id=&#34;什么时候&#34;&gt;什么时候&lt;/h3&gt;
+&lt;p&gt;提交Review时的当天或者第二天须完成&lt;/p&gt;
+&lt;h3 id=&#34;什么方式&#34;&gt;什么方式&lt;/h3&gt;
+&lt;p&gt;依照代码审核规范， 目前缺少自己的审核规范，
+类似规范参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码审查规范
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.infoq.cn/article/QJi1Kqm4pH3UNAqNzl3l&#34;&gt;Google 代码评审规范&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jimmysong.io/eng-practices/&#34;&gt;谷歌工程实践 by jimmysong&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;代码规范[golang]
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bwplotka.dev/2020/how-thanos-would-program-in-go/&#34;&gt;How Thanos Would Program in Go&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;参考runutil包解决defer中error的检查问题, 相比写匿名函数更加的优雅&lt;/li&gt;
+&lt;li&gt;包 &lt;code&gt;pkg/errors&lt;/code&gt; 比标准的&lt;code&gt;fmt.Errorf&lt;/code&gt; + &lt;code&gt;%w&lt;/code&gt;更可读&lt;/li&gt;
+&lt;li&gt;待补充&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;做什么&#34;&gt;做什么&lt;/h3&gt;
+&lt;p&gt;阅读提交的代码并给出建议完成审核&lt;/p&gt;
+&lt;h2 id=&#34;落地&#34;&gt;落地&lt;/h2&gt;
+&lt;h3 id=&#34;reviewdog--golangci-lint在gitlab上配置实践&#34;&gt;reviewdog &amp;amp; golangci-lint在gitlab上配置实践&lt;/h3&gt;
+&lt;p&gt;熟悉github action方式， 借鉴其优点； 在一个项目中实践，然后推广到其他项目中。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何做到所有项目不需要自行配置或者简单的配置（比如增加一个配置现成的文件），并且使用同一个套代码检查标准？
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;制作包含reviewdog.yml的配置文件，如果做linter升级的话，更新tag为latest最新的镜像即可.&lt;/del&gt;, 已经完成了&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;在一半的项目上增加reviewdog&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;目前linter设置为golint和errcheck方式, 下一步增加golangci-lint检查代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;目前没有非常成熟的方案，需要花费一些时间去解决现有开源方案中的问题。
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;reviewdog 结合 golangci-lint 使用，修改其输出格式, &lt;a href=&#34;https://gitlab.com/Hyvi/reviewdog-test/-/blob/gitlab-ci-test2/.gitlab-ci.yml&#34;&gt;more link&lt;/a&gt;&lt;/em&gt;
+在&lt;a href=&#34;https://github.com/calmato/presto-pay/blob/master/api/user/Makefile&#34;&gt;presto-pay&lt;/a&gt;是使用golangci-lint,但是reviewdog在官网上没有golangci-lint的案例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;失败&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;golangci-lint自身大而全的能力，导致其功能本身不稳定，不如golint或errcheck那么纯粹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reviewdog--golinterrcheckgovet-在-gitlab-上配置实践&#34;&gt;reviewdog &amp;amp; golint/errcheck/govet/&amp;hellip; 在 gitlab 上配置实践&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;reviewdog&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;stage&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;review&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 自定义镜像, 包含统一的reviewdog配置文件和需要安装的reviewdog/golangci-lint版本&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;image&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;golang:custom-latest&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;before_script&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;curl -sfL https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v0.10.0&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.27.0&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;export GITLAB_API=&amp;#34;https://examplegitlab.com/api/v4&amp;#34;  &lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;script&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;reviewdog -conf=/etc/reviewdog/reviewdog.yml  -reporter=gitlab-mr-discussion  -guess -fail-on-error=true&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;only&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;- &lt;span style=&#34;color:#000&#34;&gt;merge_requests&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;reviewdog.yml 配置如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;runner&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;golangci&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;cmd&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;golangci-lint run --config=/etc/reviewdog/golangci/golangci.yml ./...&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;errorformat&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#39;%E%f:%l:%c&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;%m&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;&amp;#39;%E%f:%l&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;%m&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;      &lt;/span&gt;- &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;%C%.%#&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;    &lt;/span&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;level&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;warning&lt;/span&gt;&lt;span style=&#34;color:#f8f8f8;text-decoration:underline&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;更多：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reviewdog 结合各种错误检查，详细见: &lt;a href=&#34;https://gitlab.com/reviewdog/reviewdog/-/blob/master/.reviewdog.yml&#34;&gt;reviewdog.yml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使用预设的errformat, 例如通过参数&lt;code&gt;-f=golangci-lint&lt;/code&gt;，更多的预设errformat使用 &lt;code&gt;reviewdog -list&lt;/code&gt; 查看， 点击链接&lt;a href=&#34;https://github.com/reviewdog/errorformat/blob/master/fmts/go.go&#34;&gt; go.go &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在gitlab里配置参考gitlab上的工程：&lt;a href=&#34;https://gitlab.com/Hyvi/reviewdog-test/-/blob/gitlab-ci-test2/.gitlab-ci.yml&#34;&gt;reviewdog test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;exit code的处理
+&lt;ul&gt;
+&lt;li&gt;errcheck 命令在检查到 err 时，exit code为0 （通过echo $?查看, 更多查看&lt;a href=&#34;https://www.tldp.org/LDP/abs/html/exit-status.html#EXITSTATUSREF&#34;&gt;Chapter 6. Exit and Exit Status&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;reviewdog默认的 exit code 为0， 当加上 -fail-on-error=true时候则会返回1（当检查到不规范的时候）&lt;/li&gt;
+&lt;li&gt;errcheck | reviewdog  根据现象是当errcheck 的 exit code 为1时，job会失败。 解决办法是 ( errcheck 2&amp;gt;&amp;amp;1 || true ) | reviewdog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这个过程中，不断增加的检查机制, 并说明理由\目的&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thanos-io/thanos&#34;&gt;thanos&lt;/a&gt; 代码规范推荐的代码 linter 工具 &lt;code&gt;go vet&lt;/code&gt;, 同时也推荐 golangci-lint,
+但 golangci-lint 无法配置的原因, 将考虑一个个配置其默认的 &lt;a href=&#34;https://golangci-lint.run/usage/linters/&#34;&gt;linter&lt;/a&gt; , 建议参考Thanos 里配置的 &lt;a href=&#34;https://www.bwplotka.dev/2020/how-thanos-would-program-in-go/#golangci-lint&#34;&gt;linters&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;govet&lt;/li&gt;
+&lt;li&gt;errcheck&lt;/li&gt;
+&lt;li&gt;staticcheck&lt;/li&gt;
+&lt;li&gt;unused&lt;/li&gt;
+&lt;li&gt;gosimple&lt;/li&gt;
+&lt;li&gt;structcheck&lt;/li&gt;
+&lt;li&gt;varcheck&lt;/li&gt;
+&lt;li&gt;ineffassign&lt;/li&gt;
+&lt;li&gt;deadcode&lt;/li&gt;
+&lt;li&gt;typecheck&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;golint&#34;&gt;golint&lt;/h4&gt;
+&lt;h4 id=&#34;errcheck&#34;&gt;errcheck&lt;/h4&gt;
+&lt;h4 id=&#34;go-vet&#34;&gt;go vet&lt;/h4&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;p&gt;反复阅读代码评审规范.
+不断增加或修正 linter&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;reviewdog
+&lt;a href=&#34;https://github.com/reviewdog/reviewdog#reporter-github-pullrequest-review-comment--reportergithub-pr-review&#34;&gt;https://github.com/reviewdog/reviewdog#reporter-github-pullrequest-review-comment--reportergithub-pr-review&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;golangci-lint
+&lt;a href=&#34;https://github.com/golangci/golangci-lint&#34;&gt;https://github.com/golangci/golangci-lint&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 控制资源的访问权限</title>
+      <link>/docs/architecture/2019-11-30-aws-iam/</link>
+      <pubDate>Sat, 30 Nov 2019 17:45:09 +0800</pubDate>
+      
+      <guid>/docs/architecture/2019-11-30-aws-iam/</guid>
+      <description>
+        
+        
+        &lt;p&gt;这是一个最好的时代，也是一个最焦虑的时代，如果你停滞不前，时代抛弃你的时候，连一句再见都不会说。&lt;/p&gt;
+&lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
+&lt;p&gt;Identity &amp;amp; Access Mangement, 身份验证以及访问控制，一种对资源提供可控安全的访问解决方案。
+用来控制对 AWS 资源的访问权限，把资源 (Resouuce) 上的操作 (Action) 授权给谁 (identity)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/images/intro-diagram%20_policies_800.png&#34; alt=&#34;IAM: https://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/intro-structure.html&#34;&gt;&lt;/p&gt;
+&lt;p&gt;图中三种 &lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html&#34;&gt;Authorization&lt;/a&gt;，看完这个链接，不止 three type :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identity-based polices
+To provide your users with permission to access the AWS resource in their own account
+&lt;ul&gt;
+&lt;li&gt;Managed policy （托管策略）
+&lt;ul&gt;
+&lt;li&gt;AWS Managed policy,&lt;/li&gt;
+&lt;li&gt;Customer managed policy,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;inline policy（内联策略）: embedded in an IAM identity(a user, group, or role)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Resource-based polices
+Popular for granting cross-account access, Resource-based policies are &lt;strong&gt;inline only&lt;/strong&gt;, not managed&lt;/li&gt;
+&lt;li&gt;Other polices
+Should be used carefully&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Q: 这三种跟 Policy 的三种类型有什么区别？
+A: 下面三种隶属于 Identity-based policy, 详细见：&lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html&#34;&gt;Identity-Based Policies&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how&#34;&gt;How&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如何优雅的定义 Resource&lt;/li&gt;
+&lt;li&gt;如何优雅的定义 Action&lt;/li&gt;
+&lt;li&gt;Identity&lt;/li&gt;
+&lt;li&gt;Policy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;resource&#34;&gt;Resource&lt;/h3&gt;
+&lt;p&gt;AWS 给出的答案是： ARN（AWS Resource Namespace), ARN 是一个命名规则，用于无歧义的对 AWS 的资源进行命名。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/zh_cn/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html#api-gateway-calling-api-permissions&#34;&gt;AWS 针对调用 API 的许可控制。 &lt;/a&gt;  对 API 许可的资源格式定义非常全面，值得借鉴&lt;/p&gt;
+&lt;h3 id=&#34;identity&#34;&gt;Identity&lt;/h3&gt;
+&lt;p&gt;User, Group, Roles
+&lt;img src=&#34;https://hyvi.github.io/blog-images/20191130/IAM-Identity.webp&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;action&#34;&gt;Action&lt;/h3&gt;
+&lt;p&gt;Action 也就是针对 AWS 上的服务提供的 API。
+Condition Context Keys，是 AWS IAM 中支持的一个功能。即在定义 Policy 时可以使用一些变量，支持复杂的表达式。&lt;/p&gt;
+&lt;h3 id=&#34;policy--todo&#34;&gt;Policy  TODO&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html&#34;&gt;Policies Type&lt;/a&gt;, 详细描述有哪些 Policy 种类，几乎覆盖大部分的场景&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identity-based policies&lt;/li&gt;
+&lt;li&gt;Resource-based policies&lt;/li&gt;
+&lt;li&gt;Permissions boundaries&lt;/li&gt;
+&lt;li&gt;Organizations SCPS&lt;/li&gt;
+&lt;li&gt;Accss control lists(ACLs)&lt;/li&gt;
+&lt;li&gt;Session Policies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用来描述授权策略的一种描述语言，用于描述谁在 xx 条件下对 xx 资源具有 xx 操作。  组成如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;“Version”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Statement： 具体策略的内容，可以是一个或者多个&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Effect: Allow 或者 Deny&lt;/li&gt;
+&lt;li&gt;Action: 具体操作，参见 &lt;a href=&#34;http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_actionsconditions.html&#34;&gt;AWS Service Actions and Condition Context Keys for Use in IAM Policies.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resource: 具体的资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个 identity 所有的多个 Policy 会发生冲突，IAM 采用的策略可以概括为 8 个字： ~凡事声明， 一票否决~&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;凡事声明： 默认情况下， Resource 是禁止访问的，只有显式声明了对资源的 Allow 权限，才允许访问。&lt;/li&gt;
+&lt;li&gt;一票否决： 即便是有 Policy 开启了 Allow, 一旦其他的 Policy 中出现对 Resource 的 Deny 声明，一律 Deny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;open-policy-agent&#34;&gt;Open Policy Agent&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000022753560&#34;&gt;入门： Open Policy Agent:简化了微服务授权&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OPA定义一套DSL语言rego,&lt;/li&gt;
+&lt;li&gt;上文中提到微服务架构下借助nginx实现权限控制的一种方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/NewbMiao/opa-koans&#34;&gt;OPA 入门系列&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;中文资料&lt;/p&gt;
+&lt;h2 id=&#34;iam-实践-todo&#34;&gt;IAM 实践 TODO&lt;/h2&gt;
+&lt;p&gt;AWS IAM is supporting a role-based access control(RBAC), paradigm by defining permissions within policies and attaching those to applicable principlas(IAM users and roles)&lt;/p&gt;
+&lt;p&gt;besides supporting both identity- and resource- based policies, IAM has alway supported aspects of attribute-based access control(ABAC) via the optional condition policy element and &amp;ldquo;expressions in which you use condition operators(equal, less than, etc.) to match the condition in the policy against values in the request&amp;rdquo;, such as IP address or time of day.&lt;/p&gt;
+&lt;p&gt;furthermore it has supported authorization based on tags.&lt;/p&gt;
+&lt;h2 id=&#34;implement--todo&#34;&gt;Implement  TODO&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;怎么实现这个系统，以及各个系统怎么接入&lt;/del&gt;
+当我继续深入了解&lt;code&gt;IAM&lt;/code&gt;，接触到一个全新的概念&lt;code&gt;零安全架构&lt;/code&gt;，来源于 Google Enterprise Security &lt;a href=&#34;https://cloud.google.com/beyondcorp/#researchPapers&#34;&gt;BeyondCorp: a new approach to enterprise security&lt;/a&gt;,  同时同行也在实践这个方案，比如中通安全 &lt;a href=&#34;https://www.secrss.com/articles/6752&#34;&gt;中通下一步的 IAM 架构设计&lt;/a&gt;,
+接下来需要充分对这个架构的理解。&lt;/p&gt;
+&lt;p&gt;各个系统依赖于这个 IAM 权限控制系统，要实现的话两步走：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;怎么实现这个系统
+&lt;ul&gt;
+&lt;li&gt;基于 &lt;a href=&#34;https://github.com/ory/hydra&#34;&gt;hydra&lt;/a&gt; 来实现 OAuth2.0 和 OIDC&lt;/li&gt;
+&lt;li&gt;基于 keto，参考实现权限系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;各个系统怎么接入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有服务以一种语言实现， IAM 的功能作为 SDK 的方式集成在服务之中，SDK 依赖弹性伸缩的数据服务，辅以上层负载均衡依照 AK 将请求路由到不同的分区，以期保证性能的同时，达到更高的灵活度。&lt;/p&gt;
+&lt;h3 id=&#34;hydra&#34;&gt;hydra&lt;/h3&gt;
+&lt;p&gt;拉取hydra代码， 本地启动服务:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;docker-compose -f quickstart.yml -f quickstart-postgres.yml up --build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 细读 &lt;a href=&#34;https://cloud.google.com/beyondcorp/&#34;&gt;BeyondCorp: A new approuch to enterprise security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 细读&lt;a href=&#34;https://www.secrss.com/articles/6752&#34;&gt;浅谈助力零信任安全架构的云 IAM 设计&lt;/a&gt; 理解整个系统的架构&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 细读 &lt;a href=&#34;https://www.authlete.com/resources/templates/sequence-diagrams/&#34;&gt;Sequence diagrams of OAuth 2.0 in Authelete&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jianshu.com/p/f59745ae7fad&#34;&gt; AWS IAM 从入门再到入门 &lt;/a&gt;  提到一些有用的工具&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000013437169&#34;&gt; IAM 身份验证以及访问控制 &lt;/a&gt;  提到临时访问凭证的方案。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://yq.aliyun.com/articles/67180&#34;&gt; 阿里云 RAM 策略整理 &lt;/a&gt; 对 Policy 详细的讲解。对于“RAM 角色身份的授权策策略检查逻辑” 最后两步不是很理解。为什么“检查 RAM 角色所属的主账号是否有授权”， 以及检查“该资源是否支持跨账号 ACL 许可” ？&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/pdf/ram-intro-cn-zh-2016-09-26.pdf&#34;&gt; 阿里云 访问控制 pdf 文件 &lt;/a&gt; 产品简介，了解 RAM-User 和 RAM-Role 的定义。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/bob_dadoudou/article/details/24718653?utm_source=tuicool&amp;amp;utm_medium=referral&#34;&gt; Restful Api 的访问控制方式&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.geek-share.com/detail/2664431666.html&#34;&gt; 当前国内外云计算平台的访问控制机制分析&lt;/a&gt;   图挂了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.aqniu.com/learn/37733.html&#34;&gt;零信任的 5W1H&lt;/a&gt; 解释什么是零信任。回答了这个概念。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cloudacademy.com/blog/amazon-cognito-manage-mobile-data/&#34;&gt;Amazon Cognito allow secure authentication in a world where mobile apps are regularly being accessed by individuals using multiple smart devices&lt;/a&gt; 资源怎么被 APP 使用。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://juejin.im/entry/5af3b1dcf265da0b7f449041&#34;&gt;贝壳找房权限服务的探索和实践&lt;/a&gt; 贝壳找房权限服务的实践分享&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.com/news/2019/02/iam-tags-attribute-based-access/&#34;&gt;AWS Identity and Access Management Gains Tags and Attribute-Based Access Control&lt;/a&gt;
+2019.2.8 IAM 这一发布表示 Support the ability to embrace attribue-based access control (ABAC) and match aws resources with IAM principals dynamically to &amp;ldquo;simplify permissions management at scale&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@darutk&#34;&gt;Takahiko Kawasaki&lt;/a&gt; Co-founder and representative director of Authlete, Inc., working as a software engineer since 1997. 图做的非常清晰.&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: APM资料整理</title>
+      <link>/docs/architecture/2019-10-27-apm/</link>
+      <pubDate>Sun, 27 Oct 2019 17:46:04 +0800</pubDate>
+      
+      <guid>/docs/architecture/2019-10-27-apm/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;NewRelic工作上使用、到Sentry接入所有应用，是时候需要对这些资料进行系统化的梳理。随着深入了解这些工具，APM出现在视线里，究竟什么是APM，它的来龙去脉是怎样的呢， 它解决了什么问题（或者目的是什么）？这篇文章根据自己检索到资料，对这些问题进行阐述&lt;/p&gt;
+&lt;h2 id=&#34;名词解释&#34;&gt;名词解释&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;管理模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;apm&#34;&gt;APM&lt;/h2&gt;
+&lt;p&gt;Application Performance Management的缩写, “应用性能管理”，由Gartner归纳抽象出的一个管理模型。&lt;br&gt;
+APM模型中一共分五个层次：&lt;br&gt;
+&lt;img src=&#34;http://static.oschina.net/uploads/space/2015/0403/095747_t0Na_118000.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;end-user-experience&#34;&gt;End User Experience&lt;/h3&gt;
+&lt;p&gt;首先关注的是终端用户对应用性能的真实体验。目的是帮助管理者准备、详尽地了解真实用户体验是什么样子。&lt;/p&gt;
+&lt;h3 id=&#34;runtime-application-architecture&#34;&gt;Runtime Application Architecture&lt;/h3&gt;
+&lt;p&gt;应用架构映射，目的是解决企业应用架构黑盒或灰盒的现状。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用的完整架构&lt;/li&gt;
+&lt;li&gt;单词请求的应用架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;business-transactions&#34;&gt;Business Transactions&lt;/h3&gt;
+&lt;p&gt;应用事务分析&lt;br&gt;
+GA大量的埋点，怎么做到不需要修改任何一行代码，我们并可以对应用取得的数据分析应用事务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确定上下文的事务操作，是同一个用户&lt;/li&gt;
+&lt;li&gt;确定所有事务操作的每一个步骤，是唯一一个动作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;deep-dive-component-monitoring&#34;&gt;Deep Dive Component Monitoring&lt;/h3&gt;
+&lt;p&gt;深度应用诊断，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在不修改用户代码的前提下，取得代码运行时性能数据&lt;/li&gt;
+&lt;li&gt;终端用户数据、运行时性能数据、数据指标数据、服务运行指标数据，有效关联&lt;/li&gt;
+&lt;li&gt;有太多的关注点，怎么方便的部署采集端&lt;/li&gt;
+&lt;li&gt;不影响原应用的性能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;analytics--reporting&#34;&gt;Analytics / Reporting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;处理数据要及时，必要时要做到实时的处理，问题可能随时都会发生；&lt;/li&gt;
+&lt;li&gt;数据的分析报告要准确 ，大量的数据本身无价值的，按照无业务模型进行分析、预测才能有其价值体现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vs-sentry&#34;&gt;VS Sentry&lt;/h2&gt;
+&lt;p&gt;“错误日志监控”也可称为“业务逻辑监控”，旨在对业务系统运行过程中产生的错误日志进行收集归纳和监控告警。&lt;br&gt;
+就是“APM应用性能监控”。 但又与APM不同，APM系统主要注重应用层的行为分析， 收集到更多是运营方向的数据。&lt;br&gt;
+而 Sentry所做是收集应用底层代码的奔溃信息，便于排查代码异常。简单来说，排障工具！&lt;br&gt;
+Sentry解决的问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法第一时间感知错误&lt;/li&gt;
+&lt;li&gt;错误信息的获取相对低效&lt;/li&gt;
+&lt;li&gt;日志的处理方式不灵活&lt;/li&gt;
+&lt;li&gt;监控覆盖面有限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sentry 是一个现代化的错误日志记录和聚合平台，支持所有的主流开发语言和平台，并提供了现代化UI。&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://my.oschina.net/ciogao/blog/395520&#34;&gt;什么是真正的APM&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://www.sohu.com/a/162399042_733939&#34;&gt;运维开发实践——基于Sentry搭建错误日志监控系统 &lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Io wait 告警问题</title>
+      <link>/docs/daily/2019-10-09-iowait/</link>
+      <pubDate>Wed, 09 Oct 2019 17:33:05 +0800</pubDate>
+      
+      <guid>/docs/daily/2019-10-09-iowait/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;%iowait&lt;/code&gt; 表示在一个采样周期内有百分之几的时间属于以下情况：CPU空闲、并且仍未完成的I/O请求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Percentage of time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request.&lt;/p&gt;
+&lt;p&gt;两个误解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%iowait&lt;/code&gt; 表示 CPU 不能工作的时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%iowait&lt;/code&gt; 表示 I/O 有瓶颈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考：&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxperf.com/?p=33&#34;&gt;理解%IOWAIT(%WIO)&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: API 兼容性设计</title>
+      <link>/docs/architecture/2019-09-25-api-compatibility/</link>
+      <pubDate>Wed, 25 Sep 2019 22:56:31 +0800</pubDate>
+      
+      <guid>/docs/architecture/2019-09-25-api-compatibility/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;向后兼容的一般目标是： 服务升级到新的minor版本或者patch后客户端不应该被破坏&lt;/p&gt;
+&lt;h2 id=&#34;名词解释&#34;&gt;名词解释&lt;/h2&gt;
+&lt;h3 id=&#34;source-compatibility&#34;&gt;Source Compatibility&lt;/h3&gt;
+&lt;p&gt;code that compiled against version X of an API will also compile against version Y .&lt;/p&gt;
+&lt;h3 id=&#34;binary-compatibility&#34;&gt;Binary Compatibility&lt;/h3&gt;
+&lt;p&gt;code that compiled against version X of an API will run correctly in an environment that has version Y of the same API.&lt;/p&gt;
+&lt;h2 id=&#34;向后兼容性的改变&#34;&gt;向后兼容性的改变&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;为API服务添加一个API接口&lt;/li&gt;
+&lt;li&gt;为API接口添加一个方法&lt;/li&gt;
+&lt;li&gt;为方法添加一个HTTP绑定&lt;/li&gt;
+&lt;li&gt;为请求消息添加一个字段&lt;/li&gt;
+&lt;li&gt;为响应消息添加一个字段&lt;/li&gt;
+&lt;li&gt;为枚举类型添加一个值&lt;/li&gt;
+&lt;li&gt;添加output-only的资源字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;不向后兼容的更改&#34;&gt;不向后兼容的更改&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;删除或重命名一个服务，字段或者枚举值&lt;/li&gt;
+&lt;li&gt;更改HTTP绑定&lt;/li&gt;
+&lt;li&gt;更改某个字段类型&lt;/li&gt;
+&lt;li&gt;更改资源名称格式&lt;/li&gt;
+&lt;li&gt;修改已有请求的可见性&lt;/li&gt;
+&lt;li&gt;在HTTP定义中改变URL格式&lt;/li&gt;
+&lt;li&gt;在资源消息中添加读/写字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000009157548#articleHeader14&#34;&gt; Google API 设计指南 - 兼容性 &lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://developers.google.com/youtube/compatibility_guidelines&#34;&gt; Backward Compatibility Guidelines &lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://google-cloud.gitbook.io/api-design-guide/&#34;&gt; API Gesign Guide &lt;/a&gt; Google针对网络API的通用设计指南&lt;br&gt;
+&lt;a href=&#34;https://github.com/kijiproject/wiki/wiki/API-Compatibility-v2&#34;&gt; API Compatibility v2&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Gomonkey Test</title>
+      <link>/docs/golang/2019-09-17-gomonkey-test/</link>
+      <pubDate>Tue, 17 Sep 2019 12:49:33 +0800</pubDate>
+      
+      <guid>/docs/golang/2019-09-17-gomonkey-test/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;
+&lt;p&gt;项目中重视单元测试，选择使用简单的第三库来实现 mock，是至关重要的，有太多的方法、依赖、全局变量需要 Mock。&lt;/p&gt;
+&lt;h2 id=&#34;各领风骚&#34;&gt;各领风骚&lt;/h2&gt;
+&lt;h3 id=&#34;gomonkey&#34;&gt;gomonkey&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/agiledragon/gomonkey&#34;&gt;gomonkey is a library to make monkey patching in unit tests easy &lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;gomonkey should work on any amd64 system&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;heading&#34;&gt;&amp;hellip;&lt;/h3&gt;
+&lt;h2 id=&#34;只取一瓢&#34;&gt;只取一瓢&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tsung is an open-source distributed load testing tool that makes it easy to stress test websockets (as well as many other protocols.)， 比如对 Websocket 长连接的压测&lt;sup&gt;[3]&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;[1] &lt;a href=&#34;https://blog.csdn.net/wf19930209/article/details/79536506&#34;&gt;X86、X86_64 和 AMD64 的由来&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;时机落后的 Intel 开始支持 AMD64 的指令集， 但是换了名字，叫x84_64， 表示x86指令集的64扩展&lt;br&gt;
+&lt;strong&gt;x86_64, x64, AMD64&lt;/strong&gt; 基本上是同一个东西&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;[2] [gomonkey 博主简书] (&lt;a href=&#34;https://www.jianshu.com/u/1381dc29fed9&#34;&gt;https://www.jianshu.com/u/1381dc29fed9&lt;/a&gt;)   golang开发&lt;/p&gt;
+&lt;p&gt;[3] Gary Rennie: The Road to 2 Million Websocket Connections in Phoenix.&lt;/p&gt;
+&lt;p&gt;[4] eranyanay: Going Infinite, handling 1M websockets connections in Go
+&lt;br&gt;&lt;/p&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: 迁移线上服务方案</title>
+      <link>/docs/architecture/2019-09-16-upgrade-online-service/</link>
+      <pubDate>Mon, 16 Sep 2019 16:09:34 +0800</pubDate>
+      
+      <guid>/docs/architecture/2019-09-16-upgrade-online-service/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;迁移服务器或者服务升级的事情时，需要对使用方来说是无感知的&lt;br&gt;
+那怎么做到新旧代码或者新旧服务的平稳过渡呢？ 根据不同的情况具体的方案也是不一样的。&lt;/p&gt;
+&lt;h2 id=&#34;调研&#34;&gt;调研&lt;/h2&gt;
+&lt;p&gt;对各大公司进行做服务升级或者迁移的方案学习。吸取有用的方案。&lt;/p&gt;
+&lt;h3 id=&#34;模拟客户端的请求前端做灰度上线&#34;&gt;模拟客户端的请求，前端做灰度上线&lt;/h3&gt;
+&lt;p&gt;部署新旧服务， 完成AB测试， 灰度上线&lt;br&gt;
+数据库数据怎么解决的？&lt;/p&gt;
+&lt;h2 id=&#34;可行的方案&#34;&gt;可行的方案&lt;/h2&gt;
+&lt;p&gt;结合目前的我们的基础设施，可执行的方案。&lt;/p&gt;
+&lt;h2 id=&#34;最佳实践&#34;&gt;最佳实践&lt;/h2&gt;
+&lt;p&gt;最后，我们的最佳实践是什么，我们实践后的总结&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://hyvi.github.io&#34;&gt;记一次从Rails直Golang的接口迁移&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs:  javascript Number --- 再次结识</title>
+      <link>/docs/javascript/2013-01-28-javascript_number_nan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/javascript/2013-01-28-javascript_number_nan/</guid>
+      <description>
+        
+        
+        &lt;p&gt;javascript类型划为两大类：原始类型（甭管这样的翻译是否规范，英文为primitive type) 和 对象类型。原始类型又划为四大类：数值、字符串、布尔值，还有两个特殊的类型：null 和 undefined 。 
+废话少说，直接进入主题：&lt;em&gt;javascript number的几点&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;与其他语言相比，javascript number不同点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JavaScript does not make a distinction between integer values
+and floating-point values. All numbers in JavaScript are represented as floating-&amp;gt;point values.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;javascript number表达的数值是有限的，于是就有overflow, underflow。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Arithmetic in JavaScript does not raise errors in cases of overflow, underflow, or division by zero.
+(-)Infinity when overflow, (-)0 when underflow 
+Division by zero is not an error in JavaScript: it simply returns infinity or negative
+infinity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;javascript number 中特殊的NaN&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is one exception, however: zero divided by zero does not have a well-defined value, and the result of this operation is the special not-a-number value, printed as  NaN.  NaN  also arises if you attempt to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;divide infinity by infinity&lt;/li&gt;
+&lt;li&gt;take the square root of a negative number&lt;/li&gt;
+&lt;li&gt;use arithmetic operators with non-numeric operands that
+cannot be converted to numbers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;
+	Infinity // A read/write variable initialized to Infinity.
+	Number.POSITIVE_INFINITY // Same value, read-only.
+	1/0 // This is also the same value.
+	Number.MAX_VALUE + 1 // This also evaluates to Infinity.
+	Number.NEGATIVE_INFINITY // These expressions are negative infinity.
+	-Infinity
+	-1/0 
+	-Number.MAX_VALUE - 1
+	NaN // A read/write variable initialized to NaN.
+	Number.NaN // A read-only property holding the same value.
+	0/0 // Evaluates to NaN.
+	Number.MIN_VALUE/2 // Underflow: evaluates to 0
+	-Number.MIN_VALUE/2 // Negative zero
+	-1/Infinity // Also negative 0
+	-0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;javascript NaN != NaN&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The not-a-number value has one unusual feature in JavaScript: it does not compare equal to any other value, including itself. This means that you can’t write x == NaN to determine whether the value of a variable xis  NaN. Instead, you should write  x != x. That expression will be true if, and only if, x is NaN. The function isNaN()is similar. It returns trueif its argument is NaN, or if that argument is a non-numeric value such as a string or an object. The related function isFinite()returns trueif its argument is a number other than NaN, Infinity, or -Infinity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;.3-.2 == .1 &amp;amp; .2-.1 == .1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-0 === 0&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;
+    var zero = 0; // Regular zero
+    var negz = -0; // Negative zero
+    zero === negz // =&gt; true: zero and negative zero are equal 
+    1/zero === 1/negz // =&gt; false: infinity and -infinity are not equal
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这算是对之前文章http://hyvi.sinaapp.com/2012/10/09/javascript-nan/ 做了个补充。
+twitter上的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  
+    [0,7,5,10,4,15,2,13,4,16,4,10,1].map(function(a){return this[a];},typeof(&#34;&#34;)+typeof(0)+NaN+&#34;d.&#34;).join(&#34;&#34;) 
+&lt;/code&gt;&lt;/pre&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: fencview.vim &#43; xshell &#43; vim &#43; 各种中文编码问题</title>
+      <link>/docs/tool/2013-08-13-xshell_vim_encoding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/tool/2013-08-13-xshell_vim_encoding/</guid>
+      <description>
+        
+        
+        &lt;p&gt;c++ 老代码都不是utf-8编码，估计是gb2312或gbk编码，而javascript是utf-8编码&lt;br&gt;
+咋办？&lt;br&gt;
+vim中只设置过&lt;br&gt;
+&amp;ldquo;set encoding=gb2312 termencoding=utf-8 &amp;ldquo;fileencoding=gbk&lt;/p&gt;
+&lt;p&gt;不同编码文件，怎么通过一个设置来搞定呢？ 疑惑！！！&lt;br&gt;
+以前碰到不同文件后缀名能用不同的高亮，不同的格式化。 &lt;br&gt;
+按此逻辑。。。&lt;br&gt;
+不同的文件编码可以用不同的配置咯。&lt;/p&gt;
+&lt;p&gt;google 就如上帝！！！&lt;/p&gt;
+&lt;p&gt;发现了 &lt;a href=&#34;http://edyfox.codecarver.org/html/vim_fileencodings_detection.html&#34;&gt;http://edyfox.codecarver.org/html/vim_fileencodings_detection.html&lt;/a&gt;&lt;br&gt;
+最后提到了统一解决办法 fencview.vim&lt;/p&gt;
+&lt;p&gt;杜绝眼高手低：搞起&lt;/p&gt;
+&lt;p&gt;一个小时&amp;hellip;&lt;br&gt;
+两个小时&amp;hellip;&lt;br&gt;
+搞定&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载插件：fencview&lt;/li&gt;
+&lt;li&gt;配置.vimrc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;encoding&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;utf-8
+&lt;span style=&#34;color:#204a87&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;termencoding&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;utf-8 &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;fileencoding=utf-8
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;let g:fencview_autodetect=1
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#204a87&#34;&gt;let&lt;/span&gt; g:fencview_auto_patterns&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后一行注释掉： 因为不注释javascript 文件不高亮。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: INTERVIEW CONCLUSION</title>
+      <link>/docs/other/2012-12-10-interview_conclusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/other/2012-12-10-interview_conclusion/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;10万数字选取最大的100个数算法度&#34;&gt;10万数字，选取最大的100个数。算法度&lt;/h3&gt;
+&lt;p&gt;这个题目当时没细想，估计面试官想问排序问题，然后说了下快速排序。&lt;br /&gt;
+其实完全没必要排序。遍历一次就可找出来最大的100数字。&lt;/p&gt;
+&lt;p&gt;类似问题： &lt;a href=&#34;https://stackoverflow.com/questions/19227698/write-a-program-to-find-100-largest-numbers-out-of-an-array-of-1-billion-numbers&#34;&gt;Write a program to find 100 largest numbers out of an array of 1 billion numbers&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;xxxx年xx月xx日-xxxxxx-表示当前日期&#34;&gt;xxxx年xx月xx日 xx:xx:xx 表示当前日期&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;http://codepen.io/Hyvi/pen/BheHd&#34;&gt;代码&lt;/a&gt; 终于重写到自己感觉满意了。&lt;/p&gt;
+&lt;h3 id=&#34;给定个返回json的url有哪些方法获取数据然后显示在其他域的页面上&#34;&gt;给定个返回json的url，有哪些方法获取数据然后显示在其他域的页面上&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;如果提供jsonp的调用,页面中调用jsonp方式&lt;/li&gt;
+&lt;li&gt;后端代理的方式。&lt;/li&gt;
+&lt;li&gt;Cross-domain Request(cors)&lt;/li&gt;
+&lt;li&gt;还有其他的方式吗？ Tell me!!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;算法时间复杂度与空间复杂度的计算&#34;&gt;算法时间复杂度与空间复杂度的计算&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;时间频度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个算法所花费的时间与代码语句执行的次数成正比。我们把一个算法中的语句执行次数称为时间频度，记作 T(n)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;渐进时间复杂度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在时间频度 T(n) 中，n 表示着问题的规模，当 n 不断变化时， T(n) 也会不断地随之变化。那么，如果我们想知道 T(n) 随着 n 变化时会呈现什么样的规律，那么就需要引入时间复杂度的概念。&lt;/p&gt;
+&lt;p&gt;如果存在某个函数 f(n)， 使得当 n 趋于无穷大时，T(n)/f(n)的极限值是不为零的常数，那么 f(n) 是 T(n) 同数量级的函数，记作 T(n) = O(f(n))，称 O(f(n)) 为算法的渐进时间复杂度，简称为时间的复杂度。&lt;/p&gt;
+&lt;p&gt;常见的时间复杂度有： O(1) 常数型； O(log&lt;sub&gt;n&lt;/sub&gt;) 对数型；O(n) 线性型；O(nlog&lt;sub&gt;n&lt;/sub&gt;) 线性对数型；O(n&lt;sup&gt;2&lt;/sup&gt;) 平方型；O(n&lt;sup&gt;3&lt;/sup&gt;) 立方型；O(n&lt;sup&gt;k&lt;/sup&gt;) k次方型；O(2&lt;sup&gt;n&lt;/sup&gt;) 指数型。&lt;/p&gt;
+&lt;p&gt;更多时间复杂度实例&lt;sup&gt;[1]&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;[1] 程序新视界: &lt;a href=&#34;https://cloud.tencent.com/developer/article/1769988&#34;&gt;LeetCode0：学习算法必备知识：时间复杂度与空间复杂度的计算&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: nodejs</title>
+      <link>/docs/javascript/2012-11-21-nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/javascript/2012-11-21-nodejs/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;done&#34;&gt;DONE&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用c++写node本地插件，&lt;a href=&#34;https://github.com/joyent/node/tree/master/test/addons/hello-world&#34;&gt;hello-world&lt;/a&gt;. 编译构建使用&lt;a href=&#34;https://github.com/TooTallNate/node-gyp&#34;&gt;node-gyp&lt;/a&gt;
+其中对c++代码不太熟悉，好难懂的样子，回头学习下&lt;em&gt;TODO&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;性能测试，群里聊到Siege， brenchmark.js， ab(apache benchmark)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/hunvreus/api-plus-static-clients&#34;&gt;API + Static Clients&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;对cors技术解决方案&lt;/li&gt;
+&lt;li&gt;对session实现的技术方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://weibo.com/1880082254/z5KR7zF4t?type=repost&#34;&gt;CMD vs AMD&lt;/a&gt; 理解CommonJS与RequireJS&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Python 面试Problems</title>
+      <link>/docs/python/2017-09-06-python-problems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/python/2017-09-06-python-problems/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;a href=&#34;http://codingpy.com/article/essential-python-interview-questions/&#34;&gt;Python面试必须要看的15个问题&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;到底什么是Python? //考察语言特性&lt;/li&gt;
+&lt;li&gt;补充缺失的代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;print_directory_contents&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sPath&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    这个函数接受文件夹的名称作为输入参数，
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    返回该文件夹中文件的路径，
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    以及其包含文件夹中文件的路径。
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;# 补充代码&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;你如何管理不同版本的代码？&lt;/li&gt;
+&lt;li&gt;下面代码会输出什么：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;l&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[]):&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;range&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;x&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#000&#34;&gt;l&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;append&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;print&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;l&lt;/span&gt;
+
+&lt;span style=&#34;color:#000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,[&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;])&lt;/span&gt;
+&lt;span style=&#34;color:#000&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;这两个参数是什么意思：*args，**kwargs？我们为什么要使用它们？&lt;/li&gt;
+&lt;li&gt;下面这些是什么意思：@classmethod, @staticmethod, @property？&lt;/li&gt;
+&lt;li&gt;递归和生成器（generator）的使用&lt;/li&gt;
+&lt;li&gt;简要描述Python的垃圾回收机制（garbage collection）。&lt;/li&gt;
+&lt;li&gt;将下面的函数按照执行效率高低排序。它们都接受由0至1之间的数字构成的列表作为输入。这个列表可以很长。一个输入列表的示例如下：[random.random() for i in range(100000)]。你如何证明自己的答案是正确的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;f1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lIn&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;sorted&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lIn&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;l2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;l2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;f2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lIn&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lIn&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;l2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;sorted&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;l2&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+
+&lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;f3&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;lIn&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;lIn&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;]&lt;/span&gt;
+    &lt;span style=&#34;color:#000&#34;&gt;l2&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#204a87&#34;&gt;sorted&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;l1&lt;/span&gt; &lt;span style=&#34;color:#204a87;font-weight:bold&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;i&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;0.5&lt;/span&gt;&lt;span style=&#34;color:#000;font-weight:bold&#34;&gt;)]&lt;/span&gt;
+		
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

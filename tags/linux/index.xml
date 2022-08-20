@@ -1,0 +1,44 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elon`s Blog – linux</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on Elon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Oct 2019 17:33:05 +0800</lastBuildDate>
+    
+	  <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Io wait 告警问题</title>
+      <link>/docs/daily/2019-10-09-iowait/</link>
+      <pubDate>Wed, 09 Oct 2019 17:33:05 +0800</pubDate>
+      
+      <guid>/docs/daily/2019-10-09-iowait/</guid>
+      <description>
+        
+        
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;%iowait&lt;/code&gt; 表示在一个采样周期内有百分之几的时间属于以下情况：CPU空闲、并且仍未完成的I/O请求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Percentage of time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request.&lt;/p&gt;
+&lt;p&gt;两个误解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%iowait&lt;/code&gt; 表示 CPU 不能工作的时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%iowait&lt;/code&gt; 表示 I/O 有瓶颈&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考：&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://linuxperf.com/?p=33&#34;&gt;理解%IOWAIT(%WIO)&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

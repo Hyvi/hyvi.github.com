@@ -1,0 +1,65 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elon`s Blog – API</title>
+    <link>/tags/api/</link>
+    <description>Recent content in API on Elon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Sep 2019 22:56:31 +0800</lastBuildDate>
+    
+	  <atom:link href="/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: API 兼容性设计</title>
+      <link>/docs/architecture/2019-09-25-api-compatibility/</link>
+      <pubDate>Wed, 25 Sep 2019 22:56:31 +0800</pubDate>
+      
+      <guid>/docs/architecture/2019-09-25-api-compatibility/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;向后兼容的一般目标是： 服务升级到新的minor版本或者patch后客户端不应该被破坏&lt;/p&gt;
+&lt;h2 id=&#34;名词解释&#34;&gt;名词解释&lt;/h2&gt;
+&lt;h3 id=&#34;source-compatibility&#34;&gt;Source Compatibility&lt;/h3&gt;
+&lt;p&gt;code that compiled against version X of an API will also compile against version Y .&lt;/p&gt;
+&lt;h3 id=&#34;binary-compatibility&#34;&gt;Binary Compatibility&lt;/h3&gt;
+&lt;p&gt;code that compiled against version X of an API will run correctly in an environment that has version Y of the same API.&lt;/p&gt;
+&lt;h2 id=&#34;向后兼容性的改变&#34;&gt;向后兼容性的改变&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;为API服务添加一个API接口&lt;/li&gt;
+&lt;li&gt;为API接口添加一个方法&lt;/li&gt;
+&lt;li&gt;为方法添加一个HTTP绑定&lt;/li&gt;
+&lt;li&gt;为请求消息添加一个字段&lt;/li&gt;
+&lt;li&gt;为响应消息添加一个字段&lt;/li&gt;
+&lt;li&gt;为枚举类型添加一个值&lt;/li&gt;
+&lt;li&gt;添加output-only的资源字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;不向后兼容的更改&#34;&gt;不向后兼容的更改&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;删除或重命名一个服务，字段或者枚举值&lt;/li&gt;
+&lt;li&gt;更改HTTP绑定&lt;/li&gt;
+&lt;li&gt;更改某个字段类型&lt;/li&gt;
+&lt;li&gt;更改资源名称格式&lt;/li&gt;
+&lt;li&gt;修改已有请求的可见性&lt;/li&gt;
+&lt;li&gt;在HTTP定义中改变URL格式&lt;/li&gt;
+&lt;li&gt;在资源消息中添加读/写字段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000009157548#articleHeader14&#34;&gt; Google API 设计指南 - 兼容性 &lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://developers.google.com/youtube/compatibility_guidelines&#34;&gt; Backward Compatibility Guidelines &lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://google-cloud.gitbook.io/api-design-guide/&#34;&gt; API Gesign Guide &lt;/a&gt; Google针对网络API的通用设计指南&lt;br&gt;
+&lt;a href=&#34;https://github.com/kijiproject/wiki/wiki/API-Compatibility-v2&#34;&gt; API Compatibility v2&lt;/a&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;center&gt;  ·End·  &lt;/center&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

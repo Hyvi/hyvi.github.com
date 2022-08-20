@@ -1,0 +1,43 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Elon`s Blog – nodejs</title>
+    <link>/tags/nodejs/</link>
+    <description>Recent content in nodejs on Elon`s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: nodejs</title>
+      <link>/docs/javascript/2012-11-21-nodejs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/javascript/2012-11-21-nodejs/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;done&#34;&gt;DONE&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;用c++写node本地插件，&lt;a href=&#34;https://github.com/joyent/node/tree/master/test/addons/hello-world&#34;&gt;hello-world&lt;/a&gt;. 编译构建使用&lt;a href=&#34;https://github.com/TooTallNate/node-gyp&#34;&gt;node-gyp&lt;/a&gt;
+其中对c++代码不太熟悉，好难懂的样子，回头学习下&lt;em&gt;TODO&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;性能测试，群里聊到Siege， brenchmark.js， ab(apache benchmark)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://speakerdeck.com/hunvreus/api-plus-static-clients&#34;&gt;API + Static Clients&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;对cors技术解决方案&lt;/li&gt;
+&lt;li&gt;对session实现的技术方案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;http://weibo.com/1880082254/z5KR7zF4t?type=repost&#34;&gt;CMD vs AMD&lt;/a&gt; 理解CommonJS与RequireJS&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
